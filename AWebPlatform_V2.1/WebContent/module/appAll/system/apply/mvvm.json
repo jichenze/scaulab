@@ -1,0 +1,19 @@
+{
+	"views": {
+		"applyV": {
+			"template": "apply.jsp",
+			"js": "apply.js"
+		}
+	}, 
+	
+	"models": {
+	}, 
+	
+	"flows": [
+		{
+			"id": "applyV"
+		}
+	],
+
+	"stepBar": false
+}

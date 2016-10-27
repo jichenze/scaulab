@@ -1,0 +1,19 @@
+{
+	"views": {
+		"deviceV": {
+			"template": "device.jsp",
+			"js": "device.js"
+		}
+	}, 
+	
+	"models": {
+	}, 
+	
+	"flows": [
+		{
+			"id": "deviceV"
+		}
+	],
+
+	"stepBar": false
+}

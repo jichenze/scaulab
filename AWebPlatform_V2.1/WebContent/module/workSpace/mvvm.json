@@ -1,0 +1,19 @@
+{
+	"views": {
+		"workSpaceV": {
+			"template": "workspace.jsp",
+			"js": "workspace.js"
+		}
+	}, 
+	
+	"models": {
+	}, 
+	
+	"flows": [
+		{
+			"id": "workSpaceV"
+		}
+	],
+
+	"stepBar": false
+}

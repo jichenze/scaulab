@@ -1,0 +1,12 @@
+{
+    "views": {
+        "barV": {
+            "template": "testSDK.jsp",
+            "js": "testSDK.js"
+        }
+    },
+    "models": {},
+    "flows": [{
+        "id": "barV"
+    }]
+}

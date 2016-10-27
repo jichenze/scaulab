@@ -1,0 +1,19 @@
+{
+	"views": {
+		"fineView": {
+			"template": "fine.jsp",
+			"js": "appall.js"
+		}
+	}, 
+	
+	"models": {
+	}, 
+	
+	"flows": [
+		{
+			"id": "fineView"
+		}
+	],
+
+	"stepBar": false
+}

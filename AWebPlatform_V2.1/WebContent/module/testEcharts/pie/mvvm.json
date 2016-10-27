@@ -1,0 +1,12 @@
+{
+    "views": {
+        "pieV": {
+            "template": "pie.jsp",
+            "js": "pie.js"
+        }
+    },
+    "models": {},
+    "flows": [{
+        "id": "pieV"
+    }]
+}

@@ -1,0 +1,26 @@
+{
+	"views": {
+		"defineView": {
+			"template":"afaDefine.jsp",
+			"js":"afaDefine.js"
+		},
+		"boardView": {
+		    "template": "board.jsp",
+		    "js": "board.js"
+		}
+	}, 
+	
+	"models": {
+	}, 
+	
+	"flows": [
+		{
+			"id": "defineView"
+		},
+		{
+	  		"id": "boardView"
+		}
+	],
+
+	"stepBar": false
+}

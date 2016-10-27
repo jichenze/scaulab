@@ -1,0 +1,19 @@
+{
+	"views": {
+		"echartView": {
+			"template": "afaEchart.jsp",
+			"js": "afaEchart.js"
+		}
+	}, 
+	
+	"models": {
+	}, 
+	
+	"flows": [
+		{
+			"id": "echartView"
+		}
+	],
+
+	"stepBar": false
+}

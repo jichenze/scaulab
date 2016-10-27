@@ -1,0 +1,13 @@
+{
+    "views": {
+        "barV1": {
+            "template": "reply.jsp",
+            "js": "reply.js"
+        }
+    },
+    "models": {},
+    "flows": [{
+        "id": "barV1"
+    }]
+    
+}

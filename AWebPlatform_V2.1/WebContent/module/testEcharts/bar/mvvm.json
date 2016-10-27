@@ -1,0 +1,12 @@
+{
+    "views": {
+        "barV": {
+            "template": "bar.jsp",
+            "js": "bar.js"
+        }
+    },
+    "models": {},
+    "flows": [{
+        "id": "barV"
+    }]
+}

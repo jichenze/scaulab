@@ -1,0 +1,127 @@
+{
+  "cpu": {//大指标名称，必须为唯一值，与其他大指标和子指标不能有冲突
+		"classify": {
+			"cpu1": {//大指标的子指标，必须为唯一值，与其他大指标和子指标不能有冲突
+			   "type": "line1",//图表类型，单条数据的折线图
+			   "dynamic":false,//图表数据动态显示，true：表示数据是逐个添加，seriesColumn对应字段获取到的是一个数值；false：表示数据是全部更新，seriesColumn对应字段获取到的是一个数组
+			   "title":"CPU1概览",//图表标题
+			   "url":"./TestChartsAction_loadCpuInfo2.do",//获取数据的url，该url是获取全部更新的
+			   "urlParams":{},//url传参
+			   "yAxisName": ["cpu成功率"],//y轴名称，无名称则为空字符串，该参数数组必须有一个值
+			   "seriesName":["CPU成功率1"],//该数组值与seriesColumn中的对应
+			   "initXAxisData":["-","-","-","-","-","-","-"],//初始化值
+			   "initSeriesData": ["-","-","-","-","-","-","-"],//初始化值
+			   "xAxisColumn":["cpuTime1"],//x轴数据
+			   "seriesColumn":{"cpuData1":"CPU成功率1"},//y轴值，对应后台传过来的字段，有几条记录就增加相应的字段，见“cpu3”，增加到三条
+			   "legend": ["CPU成功率1"],//图例，与seriesName相同
+			   "updateTime": 2000//数据刷新时间间隔
+			},
+			"cpu2": {//大指标的子指标，必须为唯一值，与其他大指标和子指标不能有冲突
+			   "type": "line2",//图表类型，该类型为两个
+			   "title":"CPUTT1概览",//图表标题
+			   "dynamic":false,//图表数据动态显示，true：表示数据是逐个添加；false：表示数据是全部更新
+			   "url":"./TestChartsAction_loadCpuInfo2.do",//获取数据的url，该url是获取全部更新的
+			   "urlParams":{},//url传参
+			   "yAxisName": ["价格","预购量"],//
+			   "seriesName":["最新成交价", "预购队列"],
+			   "initXAxisData":["-","-","-","-","-","-","-"],
+			   "initSeriesData": ["-","-","-","-","-","-","-"],
+			   "xAxisColumn":["cpuTime1","cpuTime2"],
+			   "seriesColumn":{"cpuData1":"最新成交价","cpuData2":"预购队列"},
+			   "legend": ["最新成交价", "预购队列"],
+			   "updateTime": 10000
+			},
+			"cpu3": {
+			   "type": "line1",
+			   "title":"CPU3概览",
+			   "dynamic":true,
+			   "url":"./TestChartsAction_loadCpuInfo.do",//获取数据的url，该url是获取全部更新的
+			   "urlParams":{},
+			   "yAxisName": ["cpu成功率"],
+			   "seriesName":["CPU成功率1","CPU成功率2","CPU成功率3"],
+			   "initXAxisData":["-","-","-","-","-","-","-"],
+			   "initSeriesData": ["-","-","-","-","-","-","-"],
+			   "xAxisColumn":["cpuTime1"],
+			   "seriesColumn":{"cpuData1":"CPU成功率1","cpuData2":"CPU成功率2","cpuData3":"CPU成功率3"},
+			   "legend": ["CPU成功率1","CPU成功率2","CPU成功率3"],
+			   "updateTime": 6000
+			},
+			"cpu4": {
+			   "type":"pie",//图表类型为饼状图
+			   "dynamic":true,
+			   "url":"./TestChartsAction_loadJvmInfo.do",
+			   "urlParams":{},
+			   "title":"JVM使用情况",
+			   "updateTime": 2000
+			}
+		},
+		"common": "cpu1"//默认显示的子指标
+	},
+	"jvm": {
+		"classify": {
+			"jvm1": {
+			   "type":"pie",
+			   "dynamic":true,
+			   "url":"./TestChartsAction_loadJvmInfo.do",
+			   "urlParams":{},
+			   "yAxisName": "jvm1成功率",
+			   "seriesName":"JVM1成功率",
+			   "legend": ["第一部分","第二部分","第三部分"],
+			   "data":{"jvmData1":"第一部分","jvmData2":"第二部分","jvmData3":"第三部分"},
+			   "title":"JVM使用情况",
+			   "updateTime": 2000
+			}
+		},
+		"common": "jvm1"
+	},
+	
+	"cpuEE": {
+		"classify": {
+			"cpuEE1": {
+			   "type": "line1",
+			   "title":"CPUEE概览",
+			   "dynamic":true,
+			   "url":"./TestChartsAction_loadCpuInfo.do",
+			   "urlParams":{},
+			   "yAxisName": ["cpu成功率"],
+			   "seriesName":["CPU成功率1"],
+			   "initXAxisData":["-","-","-","-","-","-","-"],
+			   "initSeriesData": ["-","-","-","-","-","-","-"],
+			   "xAxisColumn":["cpuTime1"],
+			   "seriesColumn":{"cpuData1":"CPU成功率1"},
+			   "legend": ["CPU成功率1"],
+			   "updateTime": 2000
+			}
+		},
+		"common": "cpuEE1"
+	},
+	"cpuTT": {
+		"classify": {
+			"cpuTT1": {
+			   "type": "line2",
+			   "title":"CPUTT1概览",
+			   "dynamic":false,
+			   "url":"./TestChartsAction_loadCpuInfo2.do",
+			   "urlParams":{},
+			   "yAxisName": ["价格","预购量"],
+			   "seriesName":["最新成交价", "预购队列"],
+			   "initXAxisData":["-","-","-","-","-","-","-"],
+			   "initSeriesData": ["-","-","-","-","-","-","-"],
+			   "xAxisColumn":["cpuTime1","cpuTime2"],
+			   "seriesColumn":{"cpuData1":"最新成交价","cpuData2":"预购队列"},
+			   "legend": ["最新成交价", "预购队列"],
+			   "updateTime": 10000
+			},
+			"cpuTT2": {
+			   "type":"pie",
+			   "dynamic":true,
+			   "url":"./TestChartsAction_loadJvmInfo.do",
+			   "urlParams":{},
+			   "seriesName":"JVM1成功率",
+			   "title":"cpuTT2使用情况",
+			   "updateTime": 2000
+			}
+		},
+		"common": "cpuTT1"
+	}
+}

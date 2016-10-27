@@ -1,0 +1,14 @@
+{
+    "views": {
+        "barV2": {
+            "template": "danger.jsp",
+            "js": "danger.js"
+        }
+
+    },
+    "models": {},
+    "flows": [{
+        "id": "barV2"
+    }
+    ]
+}

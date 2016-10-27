@@ -1,0 +1,13 @@
+{
+    "views": {
+        "barV1": {
+            "template": "cunfan.jsp",
+            "js": "cunfan.js"
+        }
+    },
+    "models": {},
+    "flows": [{
+        "id": "barV1"
+    }]
+    
+}

@@ -1,0 +1,19 @@
+{
+	"views": {
+		"homeV": {
+			"template": "home.html",
+			"js": "home.js"
+		}
+	}, 
+	
+	"models": {
+	}, 
+	
+	"flows": [
+		{
+			"id": "homeV"
+		}
+	],
+
+	"stepBar": false
+}

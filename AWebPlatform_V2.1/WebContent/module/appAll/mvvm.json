@@ -1,0 +1,19 @@
+{
+	"views": {
+		"appallV": {
+			"template": "appall.jsp",
+			"js": "appall.js"
+		}
+	}, 
+	
+	"models": {
+	}, 
+	
+	"flows": [
+		{
+			"id": "appallV"
+		}
+	],
+
+	"stepBar": false
+}

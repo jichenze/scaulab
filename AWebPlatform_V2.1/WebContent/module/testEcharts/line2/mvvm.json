@@ -1,0 +1,12 @@
+{
+    "views": {
+        "line2V": {
+            "template": "line2.jsp",
+            "js": "line2.js"
+        }
+    },
+    "models": {},
+    "flows": [{
+        "id": "line2V"
+    }]
+}

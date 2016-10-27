@@ -1,0 +1,19 @@
+{
+	"views": {
+		"systemV": {
+			"template": "system.jsp",
+			"js": "system.js"
+		}
+	}, 
+	
+	"models": {
+	}, 
+	
+	"flows": [
+		{
+			"id": "systemV"
+		}
+	],
+
+	"stepBar": false
+}

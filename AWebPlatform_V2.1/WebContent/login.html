@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AWeb2.1 login</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Cache-Control" content="no-cache" />
+	<meta name="msapplication-tap-highlight" content="no" />
+	<meta content="minimal-ui" name="viewport" />
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+	<meta content="yes" name="apple-mobile-web-app-capable" />
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css" />
+
+	<script type="text/javascript" src="script/lib/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="login.js"></script>
+    <style>
+        .login-video{
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+        }
+        .login-container{
+            transition: all linear .2s;
+        }
+        .btn-green-trspt{
+            border: none;
+            color: #fff;
+            filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7F05c697,endColorstr=#7F05c697);
+        }
+        .footer{
+        	position:absolute;
+		    bottom:0;
+		    padding:10px0;
+		  	font-size:10px;
+		  	color:#ffffff;
+		    margin-left:50%;
+		    left:-103px;
+        }
+    </style>
+</head>
+<body class="Login-bg">
+    <video id="loginVideo" src="img/login.mp4" autoplay="autoplay" loop="loop" class="login-video"></video>
+    <div class="login-container">
+        <div class="login-form-title">
+            <img src="img/login/logo.png">
+            <h2>AWEB平台</h2>
+            <label>AWEB PLATFORM OF AGREE TECHNOLOGY</label>
+        </div>
+        <div class="login-form-info">
+            <div class="login-form-field">
+                <label>用户名： </label> <input id="usernameField" data-tab="tab-focus" type="text" class="login-form-text"
+                                            tabindex="1">
+            </div>
+            <div class="login-form-field">
+                <label>密 &nbsp; 码：</label> <input id="passwordField" data-tab="tab-focus" type="password"
+                                                  class="login-form-text " tabindex="2">
+            </div>
+            <button id="submitButton" class="btn-green-trspt hvr-radial-out" data-tab="tab-focus" tabindex="3"
+                    type="submit">登录
+            </button>
+        </div>
+        <div id="tips" class="login-tips alert-danger"></div>
+    </div>
+    <div class="footer">版权所有 赞同科技有限公司<span style="padding-left:20px">V2.0</span></div>
+    <form id="redirectForm" action="LoginAction_redirect.do" method="POST"></form>
+
+    <script type="text/javascript" src="script/spa/component.js"></script>
+</body>
+</html>

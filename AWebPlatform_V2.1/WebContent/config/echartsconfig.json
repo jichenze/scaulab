@@ -1,0 +1,77 @@
+{
+    "cpu": {
+        "classify": {
+            "cpu1": {
+                "columnConfig": {
+                    "seriesData": {
+                        "cpuData1": "CPU成功率1",
+                        "cpuData2": "成功率2"
+                    },
+                    "xAxis": {
+                        "cpuTime1": "成功率"
+                    }
+                },
+                "dataType": "line",
+                "dataUrl": "./TestChartsAction_loadCpuInfo2.do",
+                "title": "cpu概述",
+                "updateTime": "10000",
+                "urlParams": {
+                    "staticType": "week"
+                }
+            },
+            "cpu2": {
+                "columnConfig": {
+                    "name": "jvmData1",
+                    "seriesName": "JVM1成功率",
+                    "value": "jvmData2"
+                },
+                "dataType": "pie",
+                "dataUrl": "./TestChartsAction_loadJvmInfo.do",
+                "title": "JVM",
+                "updateTime": "4000",
+                "urlParams": {
+                    "staticType": "week"
+                }
+            }
+        },
+        "common": "cpu1"
+    },
+    "jvm": {
+        "classify": {
+            "jvmPie": {
+                "columnConfig": {
+                    "name": "jvmData1",
+                    "seriesName": "JVM1成功率",
+                    "value": "jvmData2"
+                },
+                "dataType": "pie",
+                "dataUrl": "./TestChartsAction_loadJvmInfo.do",
+                "title": "JVM使用情况",
+                "updateTime": "3000",
+                "urlParams": {
+                    "staticType": "week"
+                }
+            }
+        },
+        "common": "jvmPie"
+    },
+    "test": {
+        "classify": {
+            "test1": {
+                "columnConfig": {
+                    "name": "jvmData1",
+                    "seriesName": "JVM1成功率",
+                    "value": "jvmData2"
+                },
+                "dataType": "datatable",
+                "dataUrl": "./TestChartsAction_loadJvmInfo.do",
+                "title": "table测试",
+                "updateTime": "2000",
+                "urlParams": {
+                    "staticType": "week"
+                }
+            }
+        },
+        "common": "test1"
+    }
+}

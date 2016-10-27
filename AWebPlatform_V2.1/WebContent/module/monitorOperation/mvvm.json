@@ -1,0 +1,19 @@
+{
+	"views": {
+		"mainoperationV": {
+			"template": "mainoperation.jsp",
+			"js": "mainoperation.js"
+		}
+	}, 
+	
+	"models": {
+	}, 
+	
+	"flows": [
+		{
+			"id": "mainoperationV"
+		}
+	],
+
+	"stepBar": false
+}

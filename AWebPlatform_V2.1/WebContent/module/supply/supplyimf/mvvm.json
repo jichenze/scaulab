@@ -1,0 +1,20 @@
+{
+    "views": {
+        "barV2": {
+            "template": "supplyimf.jsp",
+            "js": "supplyimf.js"
+        },
+        "barV3": {
+        	"template": "creat.jsp",
+            "js": "creat.js"
+        }
+    },
+    "models": {},
+    "flows": [{
+        "id": "barV2"
+    },
+    {
+    	"id": "barV3"
+    }
+    ]
+}

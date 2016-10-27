@@ -1,0 +1,19 @@
+{
+	"views": {
+		"mainsystemV": {
+			"template": "mainsystem.jsp",
+			"js": "mainsystem.js"
+		}
+	}, 
+	
+	"models": {
+	}, 
+	
+	"flows": [
+		{
+			"id": "mainsystemV"
+		}
+	],
+
+	"stepBar": false
+}

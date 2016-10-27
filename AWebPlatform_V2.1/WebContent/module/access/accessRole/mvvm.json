@@ -1,0 +1,19 @@
+{
+	"views": {
+		"roleV": {
+			"template": "role.jsp",
+			"js": "role.js"
+		}
+	}, 
+	
+	"models": {
+	}, 
+	
+	"flows": [
+		{
+			"id": "roleV"
+		}
+	],
+
+	"stepBar": false
+}

@@ -1,0 +1,17 @@
+{
+	"views": {
+		"step1V": {
+			"template": "flow.jsp",
+			"js": "flow.js"
+		}
+	}, 
+	
+	"models": {
+	}, 
+	
+	"flows": [
+		{
+			"id": "step1V"
+		}
+	]
+}

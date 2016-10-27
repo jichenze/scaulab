@@ -1,0 +1,19 @@
+{
+	"views": {
+		"userV": {
+			"template": "user.jsp",
+			"js": "user.js"
+		}
+	}, 
+	
+	"models": {
+	}, 
+	
+	"flows": [
+		{
+			"id": "userV"
+		}
+	],
+
+	"stepBar": false
+}

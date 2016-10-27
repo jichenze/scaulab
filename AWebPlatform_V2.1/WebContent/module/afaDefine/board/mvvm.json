@@ -1,0 +1,16 @@
+{
+  "views": {
+	"boardView":{
+		  "template": "board.jsp",
+		  "js": "board.js"
+		}
+  },
+  "models": {
+  },
+  "flows": [
+	{
+	  "id": "boardView"
+	}
+  ],
+  "stepBar": false
+}

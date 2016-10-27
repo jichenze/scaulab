@@ -1,0 +1,19 @@
+{
+	"views": {
+		"osV": {
+			"template": "os.jsp",
+			"js": "os.js"
+		}
+	}, 
+	
+	"models": {
+	}, 
+	
+	"flows": [
+		{
+			"id": "osV"
+		}
+	],
+
+	"stepBar": false
+}

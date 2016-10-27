@@ -1,0 +1,19 @@
+{
+	"views": {
+		"databaseV": {
+			"template": "database.jsp",
+			"js": "database.js"
+		}
+	}, 
+	
+	"models": {
+	}, 
+	
+	"flows": [
+		{
+			"id": "databaseV"
+		}
+	],
+
+	"stepBar": false
+}
