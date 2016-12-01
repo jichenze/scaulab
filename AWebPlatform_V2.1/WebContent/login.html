@@ -18,17 +18,9 @@
 	<script type="text/javascript" src="script/lib/jquery-1.9.1.min.js"></script>
 	<script type="text/javascript" src="login.js"></script>
     <style>
-        .login-video{
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            z-index: -1;
-        }
         .login-container{
             transition: all linear .2s;
+            
         }
         .btn-green-trspt{
             border: none;
@@ -47,12 +39,10 @@
     </style>
 </head>
 <body class="Login-bg">
-    <video id="loginVideo" src="img/login.mp4" autoplay="autoplay" loop="loop" class="login-video"></video>
     <div class="login-container">
         <div class="login-form-title">
-            <img src="img/login/logo.png">
-            <h2>AWEB平台</h2>
-            <label>AWEB PLATFORM OF AGREE TECHNOLOGY</label>
+            <h3>实验室管理平台</h3>
+            <label>Laboratory Management Platform</label>
         </div>
         <div class="login-form-info">
             <div class="login-form-field">
@@ -69,7 +59,7 @@
         </div>
         <div id="tips" class="login-tips alert-danger"></div>
     </div>
-    <div class="footer">版权所有 赞同科技有限公司<span style="padding-left:20px">V2.0</span></div>
+
     <form id="redirectForm" action="LoginAction_redirect.do" method="POST"></form>
 
     <script type="text/javascript" src="script/spa/component.js"></script>

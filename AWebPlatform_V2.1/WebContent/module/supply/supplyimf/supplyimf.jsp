@@ -50,163 +50,18 @@
 <div class=hero-unit>
 	<h2>供货信息</h2>
 </div>
-<button id="creatsupply" type="button" data-role="supplyview" class="btn btn-success pull-right">创建</button>
+<button id="creatsupply" type="button" data-role="supplyview" class="btn btn-success pull-right">创建新的供货信息</button>
 
-<button type="button" class="btn btn-danger" data-toggle="collapse" data-target="#demo-supply">详细列表</button>
+<button type="button" class="btn btn-danger">供货信息列表</button>
  
-<div id="demo-supply" class="collapse in">
-	<div class="accordion" id="accordion2">
+<div class="collapse in">
 		  <div class="accordion-group">
 		    <div class="accordion-heading">
-		      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne-supply">
-		        XX1供货信息
+		      <a class="accordion-toggle supplytitle">
+		        	双氧水供货信息
 		      </a>
 		    </div>
-		    <div id="collapseOne-supply" class="accordion-body collapse in">
-		      <div class="accordion-inner">
-		      	<div class=row>
-		      	 	 <div class="span6">
-		       		 	<h4>供货商：</h4>
-		       		 </div>
-		       		 <div class="span4">
-		       		 	<span>111</span>
-		       		 </div>
-		        </div>
-		        <div class=row>
-		      	 	 <div class="span6">
-		       		 	<h4>供货商编号：</h4>
-		       		 </div>
-		       		 <div class="span4">
-		       		 	<span>111</span>
-		       		 </div>
-		        </div>
-		        <div class=row>
-		      	 	 <div class="span6">
-		       		 	<h4>供货时间：</h4>
-		       		 </div>
-		       		 <div class="span4">
-		       		 	<span>111</span>
-		       		 </div>
-		        </div>
-		        <div class=row>
-		      	 	 <div class="span6">
-		       		 	<h4>联系电话：</h4>
-		       		 </div>
-		       		 <div class="span4">
-		       		 	<span>111</span>
-		       		 </div>
-		        </div>
-		       	<div class=row>
-		      	 	 <div class="span6">
-		       		 	<h4>接收人：</h4>
-		       		 </div>
-		       		 <div class="span4">
-		       		 	<span>111</span>
-		       		 </div>
-		        </div>
-		        <div class=row>
-		      	 	 <div class="span6">
-		       		 	<h4>采购数量：</h4>
-		       		 </div>
-		       		 <div class="span4">
-		       		 	<span>111</span>
-		       		 </div>
-		        </div>
-		        <div class=row>
-		      	 	 <div class="span6">
-		       		 	<h4>产品名称：</h4>
-		       		 </div>
-		       		 <div class="span4">
-		       		 	<span>111</span>
-		       		 </div>
-		        </div>
-		        <div class=row>
-		      	 	 <div class="span6">
-		       		 	<h4>是否已验收：</h4>
-		       		 </div>
-		       		 <div class="span4">
-		       		 	<span>111</span>
-		       		 </div>
-		        </div>
-		      </div>
-		    </div>
 		  </div>
-		  <div class="accordion-group">
-		    <div class="accordion-heading">
-		      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo-supply">
-		        XX2供货信息
-		      </a>
-		    </div>
-		    <div id="collapseTwo-supply" class="accordion-body collapse">
-		      <div class="accordion-inner">
-		        <div class=row>
-		      	 	 <div class="span6">
-		       		 	<h4>供货商：</h4>
-		       		 </div>
-		       		 <div class="span4">
-		       		 	<span>111</span>
-		       		 </div>
-		        </div>
-		        <div class=row>
-		      	 	 <div class="span6">
-		       		 	<h4>供货商编号：</h4>
-		       		 </div>
-		       		 <div class="span4">
-		       		 	<span>111</span>
-		       		 </div>
-		        </div>
-		        <div class=row>
-		      	 	 <div class="span6">
-		       		 	<h4>供货时间：</h4>
-		       		 </div>
-		       		 <div class="span4">
-		       		 	<span>111</span>
-		       		 </div>
-		        </div>
-		        <div class=row>
-		      	 	 <div class="span6">
-		       		 	<h4>联系电话：</h4>
-		       		 </div>
-		       		 <div class="span4">
-		       		 	<span>111</span>
-		       		 </div>
-		        </div>
-		       	<div class=row>
-		      	 	 <div class="span6">
-		       		 	<h4>接收人：</h4>
-		       		 </div>
-		       		 <div class="span4">
-		       		 	<span>111</span>
-		       		 </div>
-		        </div>
-		        <div class=row>
-		      	 	 <div class="span6">
-		       		 	<h4>采购数量：</h4>
-		       		 </div>
-		       		 <div class="span4">
-		       		 	<span>111</span>
-		       		 </div>
-		        </div>
-		        <div class=row>
-		      	 	 <div class="span6">
-		       		 	<h4>产品名称：</h4>
-		       		 </div>
-		       		 <div class="span4">
-		       		 	<span>111</span>
-		       		 </div>
-		        </div>
-		        <div class=row>
-		      	 	 <div class="span6">
-		       		 	<h4>是否已验收：</h4>
-		       		 </div>
-		       		 <div class="span4">
-		       		 	<span>111</span>
-		       		 </div>
-		        </div>
-		      </div>
-		    </div>
-		  </div>
-	</div>
  </div>            
  <!--创建新的供货信息-->
 <div id="supplyview" class="modal fade hide modal-lg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -231,7 +86,7 @@
 			  <div class="control-group">
 			    <label class="control-label">供货时间:</label>
 			    <div class="controls">
-			      <input type="text" id="SupplierId">
+			      <input type="text" id="SupplierTime">
 			    </div>
 			  </div>
 			  <div class="control-group">
@@ -243,25 +98,25 @@
 			  <div class="control-group">
 			    <label class="control-label">接收人:</label>
 			    <div class="controls">
-			      <input type="text" id="SupplierId">
+			      <input type="text" id="SupplierPerson">
 			    </div>
 			  </div>
 			  <div class="control-group">
 			    <label class="control-label">采购数量:</label>
 			    <div class="controls">
-			      <input type="text" id="SupplierId">
+			      <input type="text" id="SupplierNum">
 			    </div>
 			  </div>
 			  <div class="control-group">
 			    <label class="control-label">产品名称:</label>
 			    <div class="controls">
-			      <input type="text" id="SupplierId">
+			      <input type="text" id="SupplierName">
 			    </div>
 			  </div>
 			  <div class="control-group">
 			    <label class="control-label">是否验收:</label>
 			    <div class="controls">
-			        <select>
+			        <select id="SupplierCheck">
 					  <option>是</option>
 					  <option>否</option>
 					</select>
@@ -270,8 +125,48 @@
 			</form>
 		</div>
 		<div class="modal-footer">
-		    <a href="#" class="btn">关闭</a>
-		    <a href="#" class="btn btn-info">创建</a>
+		    <a href="#" class="btn closenewsupply">关闭</a>
+		    <a href="#" class="btn btn-info creatnewsupply">创建</a>
 		</div>
+ 		
+</div>
+
+<!--供货信息详情框-->
+<div id="supplydetail" class="modal fade hide modal-lg" aria-hidden="true">
+	<div class="modal-header">
+	  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	  <h3>供货信息</h3>
+	</div>
+	<div class="modal-body">
+		<table class="table table-striped table-bordered">
+		  <thead>
+		    <tr>
+		      <th>供货商</th>
+		      <th>供货商编号/th>
+		      <th>供货时间</th>
+		      <th>联系电话</th>
+		      <th>接收人</th>
+		      <th>产品名称</th>
+		      <th>数量</th>
+		      <th>是否已验收</th>
+		    </tr>
+		  </thead>
+		  <tbody class="replybody">
+		    <tr>
+		      <td>广州XX</td>
+		      <td>215489635 </td>
+			  <td>2016-11-28</td>
+		      <td>13724064007 </td>
+		      <td>杨老师</td>
+		      <td>高锰酸钾 </td>
+		      <td>100g</td>
+		      <td>是</td>
+		    </tr>
+		  </tbody>
+		</table>
+	</div>
+  	<div class="modal-footer">
+	    <a href="#" class="btn">关闭</a>
+	</div>
  		
 </div>

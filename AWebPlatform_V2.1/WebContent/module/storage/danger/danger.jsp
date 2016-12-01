@@ -82,14 +82,6 @@
 		        </div>
 		        <div class=row>
 		      	 	 <div class="span6">
-		       		 	<h4>总量：</h4>
-		       		 </div>
-		       		 <div class="span4">
-		       		 	<span>111</span>
-		       		 </div>
-		        </div>
-		        <div class=row>
-		      	 	 <div class="span6">
 		       		 	<h4>存储地点：</h4>
 		       		 </div>
 		       		 <div class="span4">
@@ -107,22 +99,6 @@
 		        <div class=row>
 		      	 	 <div class="span6">
 		       		 	<h4>入库量：</h4>
-		       		 </div>
-		       		 <div class="span4">
-		       		 	<span>111</span>
-		       		 </div>
-		        </div>
-		        <div class=row>
-		      	 	 <div class="span6">
-		       		 	<h4>物品类型：</h4>
-		       		 </div>
-		       		 <div class="span4">
-		       		 	<span>111</span>
-		       		 </div>
-		        </div>
-		        <div class=row>
-		      	 	 <div class="span6">
-		       		 	<h4>存储方式：</h4>
 		       		 </div>
 		       		 <div class="span4">
 		       		 	<span>111</span>
@@ -186,12 +162,6 @@
 			    </div>
 			  </div>
 			  <div class="control-group">
-			    <label class="control-label">总量:</label>
-			    <div class="controls">
-			      <input type="text" id="experimentationAll">
-			    </div>
-			  </div>
-			  <div class="control-group">
 			    <label class="control-label">存储地点:</label>
 			    <div class="controls">
 			      <input type="text" id="experimentationAddr">
@@ -226,12 +196,6 @@
 			    <label class="control-label">负责人:</label>
 			    <div class="controls">
 			      <input type="text" id="experimentationMan">
-			    </div>
-			  </div>
-			   <div class="control-group">
-			    <label class="control-label">备注:</label>
-			    <div class="controls">
-			      <input type="text" id="experimentationBeizhu">
 			    </div>
 			  </div>
 			   <div class="control-group">

@@ -103,16 +103,18 @@
 			
 			<div class="accordion-group">
 			    <div class="accordion-heading">
-			        <a class="accordion-toggle collapsed hvr-bounce-to-left" data-toggle="collapse" data-parent="#asideMenuList" href="#asideDev12">
+			        <a class="accordion-toggle collapsed hvr-bounce-to-left" data-toggle="collapse" data-parent="#asideMenuList" href="#asideDev4">
 			            <i class="fa   fa-yelp"></i><span>&nbsp;使用</span>
 			            <i class="fa fa-angle-down"></i>
 			        </a>
 			    </div>
-			    <div id="asideDev12" class="accordion-body collapse">
+			    <div id="asideDev4" class="accordion-body collapse">
 			        <div class="accordion-inner">
 			            <ul class="nav nav-list">
 			                <!--子菜单项 Start-->
-			                <li><a data-href="buy#buy">采购</a></li>
+			                <li><a data-href="use#appointment">预约</a></li>
+			                <li><a data-href="use#review">审核</a></li>
+			                <li><a data-href="use#use">使用</a></li>
 			                <!--子菜单项 End-->
 			            </ul>
 			        </div>
@@ -138,48 +140,7 @@
 			        </div>
 			    </div>
 			</div>
-			
-			<div class="accordion-group">
-			    <div class="accordion-heading">
-			        <a class="accordion-toggle collapsed hvr-bounce-to-left" data-toggle="collapse" data-parent="#asideMenuList" href="#asideDev12">
-			            <i class="fa   fa-yelp"></i><span>&nbsp;个人中心</span>
-			            <i class="fa fa-angle-down"></i>
-			        </a>
-			    </div>
-			    <div id="asideDev12" class="accordion-body collapse">
-			        <div class="accordion-inner">
-			            <ul class="nav nav-list">
-			                <!--子菜单项 Start-->
-			                <!--子菜单项 End-->
-			            </ul>
-			        </div>
-			    </div>
-			</div>
-			
-			<div class="accordion-group">
-                <div class="accordion-heading">
-                    <a class="accordion-toggle collapsed hvr-bounce-to-left" data-toggle="collapse" data-parent="#asideMenuList" href="#asideDev19">
-                        <i class="fa fa-yelp"></i>
-                        <span>图表测试</span>
-                        <i class="fa fa-angle-down"></i>
-                    </a>
-                </div>
-                <div id="asideDev19" class="accordion-body collapse">
-                    <div class="accordion-inner">
-                        <ul class="nav nav-list">
-                            <li><a data-href="testEcharts#line">折线</a></li>
-                            <li><a data-href="testEcharts#line2">折线2</a></li>
-                            <li><a data-href="testEcharts#bar">柱形图</a></li>
-                            <li><a data-href="testEcharts#pie">饼状图</a></li>
-                            <li><a data-href="gridhome">网格</a></li>
-                            <li><a data-href="afaEchart">afaEchart</a></li>
-                            <li><a data-href="echartsModule">test</a></li>
-                             <li><a data-href="fineDegree">test2</a></li>
-                            <li><a data-href="afaDefine">布局测试</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+
 			
             <div class="accordion-group">
                 <div class="accordion-heading">
@@ -219,20 +180,10 @@
 		<div class="navbar-inner">
 			<ul class="nav pull-left banner-menu">
 			   <li><div style="height:60px;width:60px;padding:20px 0 20px 20px"><img src="img/login/logo2.png"></div></li>
-			   <li><div style="height:60px;width:auto;padding:20px 0 20px 8px;color:#fff"><span style=" font-weight:bold;font-size:1.3em">CAMA集中监控系统</span><span id="nowTime" style="line-height:3.2em;display:block;opacity: 0.8;"></span></div></li>
+			   <li><div style="height:60px;width:auto;padding:20px 0 20px 8px;color:#fff"><span style=" font-weight:bold;font-size:1.3em">实验室管理系统</span><span id="nowTime" style="line-height:3.2em;display:block;opacity: 0.8;"></span></div></li>
 			</ul>
             <ul id="bannerMenu" class="nav banner-menu"></ul>
             <ul class="nav pull-right banner-menu">
-                <li class="dropdown"><a class="dropdown-toggle"
-                                        data-toggle="dropdown" href="javascript:" title="帮助文档"> <i
-                        class="fa fa-question-circle"></i>
-                </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="module/userGuide/userGuide.html" target="_blank"><i
-                                class="fa fa-newspaper-o"></i>&nbsp;用户指南</a></li>
-                        <li><a href="module/userGuide/frequentlyAsked.html" target="_blank"><i
-                                class="fa fa-star"></i>&nbsp;常见问题</a></li>
-                    </ul></li>
                 <li><a id="skinChangeShowBtn" href="javascript:" title="皮肤设置"><i
                         class="fa fa-leaf"></i></a>
                     <div id="skinChangeContainer" class="skin-change in">
@@ -267,15 +218,7 @@
                             </div>
                         </div>
                     </div></li>
-                <li><a id="messageCenterShowBtn" href="javascript:"
-                       title="消息中心"><i class="fa fa-bell-o"></i></a>
-                    <div id="messageCenterContainer" class="message-center collapsed">
-                        <h3 class="page-header">
-                            消息中心 <small><a title="清除全部" class="close">&times;清除全部</a></small>
-                        </h3>
-                        <ul id="messageCenterList" class="unstyled message-center-list"></ul>
-                    </div></li>
-                <%--<li><a href="javascript:" title="设置"><i class="fa fa-cogs"></i></a></li>--%>
+        
                 <li class="dropdown"><a class="dropdown-toggle"
                                         data-toggle="dropdown" href="javascript:" title="用户管理"> <i
                         class="fa fa-user"></i>

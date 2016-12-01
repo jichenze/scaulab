@@ -1,0 +1,13 @@
+{
+    "views": {
+        "barV1": {
+            "template": "review.jsp",
+            "js": "review.js"
+        }
+    },
+    "models": {},
+    "flows": [{
+        "id": "barV1"
+    }]
+    
+}
