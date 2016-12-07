@@ -10,33 +10,33 @@ define([ "jquery" ], function() {
 			                app.formControl.set('申请单', $('[data-role="formControlTemp1"]', $el).html(), function (context, $form) {
 			                    //提交按钮事件绑定
 			                    $('#formControlSmtBtn',$form).click(function(){
-			                    	app.domain.exports("studentbuybiao",{
-			                    		"studentbuyname":$(".applybuyName").val(),
-		                    			"studentbuynum":$(".applybuyNum").val(),
-		                    			"studentid":$(".applyId").val(),
-		                    			"studentname":$(".applyName").val(),	
-		                    			"studentphone":$(".applyPhone").val(),
-		                    			"studentuse":$(".applybuyWhere").val(),	
-		                    			"studentwhy":$(".applybuyWhy").val()
-		                    		});
-//			                    	$.ajax({
-//			                    		url:'http://rap.taobao.org/mockjsdata/10584/sumitstudentbuy',
-//			                    		data:{
-//			                    			studentbuyname:1,
-//			                    			studentbuynum:1,
-//			                    			studentid:1,
-//			                    			studentname:1,	
-//			                    			studentphone:1,
-//			                    			studentteacher:1,
-//			                    			studentuse:1,	
-//			                    			studentwhy:1
-//			                    		},
-//			                    		success:function(){
-//			                    			alert("ok")
-//			                    		}
-//			                    	})
-			                    	app.formControl.hide();
-			                    	alert("提交成功")
+			                    	if($(".applybuyName").val()==""||$(".applybuyNum").val()==""||$(".applyId").val()==""||$(".applyName").val()==""||$(".applyPhone").val()==""||$(".applybuyWhy").val()==""){
+			                    		alert("请填写完整申请单");
+			                    	}else{
+				                    	$.ajax({
+				                    		"type": "post",
+				                    		"contentType": "application/x-www-form-urlencoded;charset=utf-8",
+				                    		"url":'CaigouAction_shenQing.do',
+				                    		"dataType": "json",
+				                    		"data":{
+				                    			cgname:$(".applyName").val(),	
+				                    			cgpid:$(".applyId").val(),		
+				                    			cgnumber:$(".applyPhone").val(),
+				                    			cgwpname:$(".applybuyName").val(),
+				                    			cgwpsl:$(".applybuyNum").val(),	
+				                    			cgyy:$(".applybuyWhy").val()
+				                    		},
+				                    		shelter: '正在提交申购单，请稍侯…',
+				                    		success:function(){
+				                    			alert("提交成功");
+				                    			app.formControl.hide();
+				                    		},
+				            				error: function (xhr, status, errMsg) {
+				            					alert('错误' + status, errMsg, 'msg');
+				            				}
+				                    	});				                    	
+				                    	
+			                    	}
 			                    });
 			                }).show();
 			                break;

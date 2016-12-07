@@ -6,6 +6,10 @@
     <package name="ajax" extends="json-default">
         
         <!-- 用户登陆管理 -->
+        <!-- 首先login提交用户名和密码給LoginAction 的signIn()方法验证，成功返回success和
+        strutsMessage="success"，然后 login的 redirectForm 提交到redirect() 方法，
+        	 获得<result name="redirect">  ，重定向到/index.jsp  -->
+        	 
         <action name="LoginAction_*" class="LoginActionBean" method="{1}">
             <result name="success" type="json">
                 <param name="root">strutsMessage</param>
@@ -92,5 +96,35 @@
                 <param name="root">strutsMessage</param>
             </result>
         </action>
+        
+        <!-- 采购 -->
+        <action name="CaigouAction_*" class="CaigouActionBean" method="{1}">
+            <result name="success" type="json">
+                <param name="root">strutsMessage</param>
+            </result>
+        </action>
+       
+        
+        <!-- 供货 -->
+        <action name="GonghuoAction_*" class="GonghuoActionBean" method="{1}">
+            <result name="success" type="json">
+                <param name="root">strutsMessage</param>
+            </result>
+        </action>
+        
+        <!-- 存储 -->
+        <action name="CunchuAction_*" class="CunchuActionBean" method="{1}">
+            <result name="success" type="json">
+                <param name="root">strutsMessage</param>
+            </result>
+        </action>
+        
+        <!-- 使用 -->
+        <action name="ShiyongAction_*" class="ShiyongActionBean" method="{1}">
+            <result name="success" type="json">
+                <param name="root">strutsMessage</param>
+            </result>
+        </action>
+        <!-- 回收 -->
     </package>
 </struts>

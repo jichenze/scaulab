@@ -25,7 +25,7 @@ public class StandardDbSupport extends HibernateDaoSupport implements
 		IDbSupport {
 
 	/*
-	 * (non-Javadoc)
+	 * (non-Javadoc)通过类查询所有表中数据
 	 * @see cn.com.agree.aweb.hibernate.dao.support.IDbSupport#queryAllDataByClass(java.lang.Class)
 	 */
 	@Override

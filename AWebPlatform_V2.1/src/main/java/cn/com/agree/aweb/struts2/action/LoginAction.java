@@ -40,7 +40,6 @@ public class LoginAction extends StandardActionSupport {
 	 */
 	public String signIn() {
 
-
 		String encPassword = DES.getEncString(password);
 		
 		//登陆成功时，检查该用户是否在别处登陆，若存在则登出原用户
