@@ -59,7 +59,8 @@ public class CaigouAction extends StandardActionSupport {
 				cg.setCaigou_sl(cgwpsl);
 				cg.setCaigou_yy(cgyy);
 				
-				this.dbOperation.saveSingleData(cg);
+				//this.dbOperation.saveSingleData(cg);
+				this.dbOperation.saveOrUpdateSingleData(cg);
 				strutsMessage = StrutsMessage.successMessage();
 				strutsMessage.addParameter("cg",cg);
 			} catch (DBSupportException e) {

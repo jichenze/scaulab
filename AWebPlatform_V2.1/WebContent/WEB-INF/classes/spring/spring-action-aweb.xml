@@ -48,4 +48,9 @@
 	<bean id="CamaComponentPagesActionBean" class="cn.com.agree.aweb.struts2.action.CamaComponentPagesAction" scope="prototype">
 		<property name="dbOperation" ref="hibernateDao"></property>
 	</bean>
+	
+	<bean id="CaigouActionBean" class="cn.com.agree.aweb.struts2.action.CaigouAction" scope="prototype">
+		<property name="dbOperation" ref="hibernateDao"></property>
+	</bean>
+	
 </beans>
