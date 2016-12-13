@@ -33,10 +33,10 @@ public class CaigouAction extends StandardActionSupport {
 	private String cgwpname;
 	private String cgwpsl;
 	private String cgyy;
-	private String cgyn;
-	private String cgpl;
-	private String cgdate;
-	private String cgshyy;
+	private String cgyn;//是否通过
+	private String cgpl;//采购批量
+	private String cgdate;//采购日期
+	private String cgshyy;//不通过原因
 	
 	private StrutsMessage strutsMessage;
 	
@@ -124,7 +124,7 @@ public class CaigouAction extends StandardActionSupport {
 			
 			if(cg != null){
 				cg.setCaigou_yn(cgyn);
-				if(cgyn=="yes"){
+				if(cgyn.equals("yes")){
 					cg.setCaigou_pl(cgpl);
 					cg.setCaigou_date(cgdate);
 				}else{

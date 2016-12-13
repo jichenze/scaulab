@@ -1,116 +1,145 @@
 define([ "jquery" ], function() {
-        return {
+    var supplyTb,
+        supplyData = {};
+    
+    function initReplyTb($el) {
+        //加载实例数据
+        return $('#supplyTb', $el).dataTable({
+            'sAjaxSource': './GonghuoAction_loadAllGonghuo.do',
+            'bDestroy': true,
+            'bStateSave': true,
+            "bPaginate": true, //开关，是否显示分页器
+            "bInfo": false, //开关，是否显示表格的一些信息
+            "aaSorting": [[1, 'desc']],
+            'aoColumnDefs': [
+                             //多选框禁用排序
+                             {"bSortable": false, "aTargets": [0]},
+                             {"aTargets":[1],"sClass":"link"}
+                         ],
+            //使用post方式传递数据
+            'fnServerData': function (sSource, aoData, fnCallback) {
+                $.ajax({
+                    "type": "post",
+                    "contentType": "application/x-www-form-urlencoded;charset=utf-8",
+                    "url": sSource,
+                    "dataType": "json",
+                    "data": "",
+                shelter:'正在加载供货单，请稍侯…',
+                    success: function (data) {
+                    	 var dealData=[],
+                         i,items,item;
 
+                     if(data.status&&data.content){
+                         for(items=data.content.ghData,i=items.length;(item=(items[--i]));) {
+                             dealData.push([
+                                 '<input type="checkbox" id="' + item.gonghuo_fname + '"/>',
+                                 item.gonghuo_fname,
+                                 item.gonghuo_id,
+                                 item.gonghuo_time,
+                                 item.gonghuo_phone,
+                                 item.gonghuo_sname,
+                                 item.gonghuo_name,
+                                 item.gonghuo_sl,
+                             ]);
+                             supplyData[item.gonghuo_fname] = item;
+                         }
+                     }else {
+                         app.alert('供货单单信息', data.errorMsg || '加载信息错误', app.alertShowType.ERROR, app.alertMsgType.MESSAGE);
+                     }
+
+                     fnCallback({'aaData': dealData});
+                    }, error: function (xhr, status, errMsg) {
+                        fnCallback({'aaData': []});
+                    }
+                });
+            }
+        });
+    }
+        
+    return {
+        // 模块加载结束后，会触发该方法
         load : function($el, scope, handler) {
-        	console.log("页面加载时，进入了load方法");
-			this.delegateEvents({
-               'click #creatsupply':function(){
-            	  $('#supplyview').modal('show');
-               }
-			})
-			$(".closenewsupply",$el).click(function(){
-				 $('#supplyview').modal('hide');
-			})
-			$(".creatnewsupply",$el).click(function(){
-				if($("#SupplierName").val()==""||$("#Supplier").val()==""||$("#SupplierId").val()==""||$("#SupplierTime").val()==""||$("#SupplierPhone").val()==""||$("#SupplierPerson").val()==""||$("#SupplierPerson").val()==""||$("#SupplierNum").val()==""||$("#SupplierName").val()==""){
-					alert("请填写完整");
-				}else{
-							alert("创建成功");
-							$('#supplyview').modal('hide');
-//							$(".accordion",$el).append("<div class='accordion-group'>"+
-//					    "<div class='accordion-heading'>"+
-//					      "<a class='accordion-toggle' data-toggle='collapse' data-parent='#accordion2' href='#collapseOne-supply'>"+
-//					        $("#SupplierName").val()+"供货信息"+
-//					      "</a>"+
-//					    "</div>"+
-//					    "<div id='collapseOne-supply' class='accordion-body collapse in'>"+
-//					      "<div class='accordion-inner'>"+
-//					      	"<div class='row'>"+
-//					      	 	 "<div class='span6'>"+
-//					       		 	"<h4>供货商：</h4>"+
-//					       		 "</div>"+
-//					       		 "<div class='span4'>"+
-//					       		 	"<span>"+$("#Supplier").val()+"</span>"+
-//					       		 "</div>"+
-//					        "</div>"+
-//					        "<div class=row>"+
-//					      	 	 "<div class='span6'>"+
-//					       		 	"<h4>供货商编号：</h4>"+
-//					       		 "</div>"+
-//					       		 "<div class='span4'>"+
-//					       		 	"<span>"+$("#SupplierId").val()+"</span>"+
-//					       		 "</div>"+
-//					        "</div>"+
-//					        "<div class=row>"+
-//					      	 	 "<div class='span6'>"+
-//					       		 	"<h4>供货时间：</h4>"+
-//					       		 "</div>"+
-//					       		 "<div class='span4'>"+
-//					       		 	"<span>"+$("#SupplierTime").val()+"</span>"+
-//					       		 "</div>"+
-//					        "</div>"+
-//					        "<div class=row>"+
-//					      	 	 "<div class='span6'>"+
-//					       		 	"<h4>联系电话：</h4>"+
-//					       		 "</div>"+
-//					       		 "<div class='span4'>"+
-//					       		 	"<span>"+$("#SupplierPhone").val()+"</span>"+
-//					       		 "</div>"+
-//					        "</div>"+
-//					       	"<div class=row>"+
-//					      	 	 "<div class='span6'>"+
-//					       		 	"<h4>接收人：</h4>"+
-//					       		 "</div>"+
-//					       		 "<div class='span4'>"+
-//					       		 	"<span>"+$("#SupplierPerson").val()+"</span>"+
-//					       		 "</div>"+
-//					        "</div>"+
-//					        "<div class=row>"+
-//					      	 	 "<div class='span6'>"+
-//					       		 	"<h4>采购数量：</h4>"+
-//					       		 "</div>"+
-//					       		 "<div class='span4'>"+
-//					       		 	"<span>"+$("#SupplierNum").val()+"</span>"+
-//					       		 "</div>"+
-//					        "</div>"+
-//					        "<div class=row>"+
-//					      	 	 "<div class='span6'>"+
-//					       		 	"<h4>产品名称：</h4>"+
-//					       		 "</div>"+
-//					       		 "<div class='span4'>"+
-//					       		 	"<span>"+$("#SupplierName").val()+"</span>"+
-//					       		 "</div>"+
-//					        "</div>"+
-//					        "<div class=row>"+
-//					      	 	 "<div class='span6'>"+
-//					       		 	"<h4>是否已验收：</h4>"+
-//					       		 "</div>"+
-//					       		 "<div class='span4'>"+
-//					       		 	"<span>"+$("#SupplierCheck").find("option:selected").text()+"</span>"+
-//					       		 "</div>"+
-//					        "</div>"+
-//					      "</div>"+
-//					    "</div>"+
-//					  "</div>");
-//							
-				}
-				
-			})
-			$(".supplytitle").click(function(){
-				$("#supplydetail").modal('show');
-			})
+
+
+            /*数据加载*/
+            //初始化供货表格
+            supplyTb=initReplyTb($el);
+            
+
+            
+            
+            /*函数定义*/
+            handler.fn = {
+                    supplyCreCallback: function (context, $ele) {              
+                            $("#supplyBtn").click(function(){
+                            	 $.ajax({
+                                     "type": "post",
+                                     "contentType": "application/x-www-form-urlencoded;charset=utf-8",
+                                     url: 'GonghuoAction_doAddGonghuo.do',
+                                     data: {
+                                     	ghrname:$("#ghrname").val(),
+                                     	ghid:$("#ghid").val(),
+                                     	ghtime:$("#ghtime").val(),
+                                     	ghpn:$("#ghpn").val(),
+                                     	ghsrname:$("#ghsrname").val(),
+                                     	ghname:$("#ghname").val(),
+                                     	ghsl:$("#ghsl").val(),
+                                     },
+                                     shelter:'正在添加，请稍侯…',
+                                     success: function (data) {
+                                         if (data.status) {
+                                            var vo = data.content.gh;
+
+                                             supplyTb.fnAddData([
+                                                 '<input type="checkbox" id="' + vo.gonghuo_fname + '"/>',
+                                                 vo.gonghuo_fname,
+                                                 vo.gonghuo_id,
+                                                 vo.gonghuo_time,
+                                                 vo.gonghuo_phone,
+                                                 vo.gonghuo_sname,
+                                                 vo.gonghuo_name,
+                                                 vo.gonghuo_sl,
+                                             ]);
+
+                                             supplyData[vo.gonghuo_fname] = vo;
+     
+                                             app.alert('创建供货信息成功！',app.alertShowType.SUCCESS);
+                                             context.hide();
+                                         } else {
+                                             app.alert('错误信息', data.errorMsg, app.alertShowType.ERROR, app.alertMsgType.MESSAGE);
+                                         }
+                                     }
+                                 });                        
+                            }) 
+                                                
+                    },
+            }
+           
+            this.delegateEvents({
+            	   //添加按钮绑定事件
+                'click #supplyCreBtn':function() {
+                    //设置创建用户表单
+                    app.formControl
+                        .set('创建供货信息', $('#supplyTemp').html(), handler.fn.supplyCreCallback)
+                        .show();
+                },
+            });
+            
+         	
+ 
         },
 
-		unload : function(handler) {
-			console.log("页面关闭时，进入了unload方法");
-		},
-		
-		pause : function($el, scope, handler) {
-			console.log("页面未关闭，但是打开了另一个页面，进入了pause方法");
-		},
-		
-		resume : function($el, scope, handler) {
-			console.log("重新进入页面，进入了resume方法");
-		}
-	};
+        // 模块销毁前触发
+        unload : function(handler) {
+         
+        },
+        // 暂停
+        pause : function($el, attr, handler) {
+        },
+        // 恢复
+        resume : function($el, attr, handler) {
+
+        }
+
+    };
 });

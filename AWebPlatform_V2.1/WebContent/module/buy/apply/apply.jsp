@@ -15,41 +15,41 @@
 	<div class="control-group">
 	     <label class="control-label" for="formControlInput">申请人：</label>
 	     <div class="controls">
-	         <input id="formControlInput" name="formControlInput" type="text" placeholder="请输入姓名" class="span8 applyName">
+	         <input id="cgname" name="cgname" type="text" placeholder="请输入姓名" class="span8 ">
 	         <span class="help-inline hide">请在这里数据数据</span>
 	     </div>
 	 </div>
 	 <div class="control-group">
 	     <label class="control-label" for="formControlInput">学号：</label>
 	     <div class="controls">
-	         <input id="formControlInput" name="formControlInput" type="text" placeholder="请输入学号" class="span8 applyId">
+	         <input id="cgpid" name="cgpid" type="text" placeholder="请输入学号" class="span8">
 	         <span class="help-inline hide">请在这里数据数据</span>
 	     </div>
 	 </div>
 	 <div class="control-group">
 	     <label class="control-label" for="formControlInput">联系方式：</label>
 	     <div class="controls">
-	         <input id="formControlInput" name="formControlInput" type="text" placeholder="请输入联系方式" class="span8 applyPhone">
+	         <input id="cgnumber" name="cgnumber" type="text" placeholder="请输入联系方式" class="span8">
 	         <span class="help-inline hide">请在这里数据数据</span>
 	     </div>
 	 </div>
 	 <div class="control-group">
 	     <label class="control-label" for="formControlInput">申购化学品名称：</label>
 	     <div class="controls">
-	         <input id="formControlInput" name="formControlInput" type="text" placeholder="请输入化学品名称" class="span8 applybuyName">
+	         <input id="cgwpname" name="cgwpname" type="text" placeholder="请输入化学品名称" class="span8">
 	         <span class="help-inline hide">请在这里数据数据</span>
 	     </div>
 	 </div>
 	 	 <div class="control-group">
 	     <label class="control-label" for="formControlInput">申购数量：</label>
 	     <div class="controls">
-	         <input id="formControlInput" name="formControlInput" type="text" placeholder="请输入数量" class="span8 applubuyNum">
+	         <input id="cgwpsl" name="cgwpsl" type="text" placeholder="请输入数量" class="span8">
 	         <span class="help-inline hide">请在这里数据数据</span>
 	     </div>
 	 <div class="control-group">
 	     <label class="control-label" for="formControlTextarea">申购原因：</label>
 	     <div class="controls">
-	         <textarea id="formControlTextarea" name="formControlTextarea" placeholder="请输入原因" class="span8 applybuyWhy" rows="3"></textarea>
+	         <textarea id="cgyy" name="cgyy" placeholder="请输入原因" class="span8" rows="3"></textarea>
 	         <span class="help-inline hide"></span>
 	     </div>
 	 </div>

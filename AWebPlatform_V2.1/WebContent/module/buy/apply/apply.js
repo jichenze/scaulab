@@ -19,12 +19,12 @@ define([ "jquery" ], function() {
 				                    		"url":'CaigouAction_shenQing.do',
 				                    		"dataType": "json",
 				                    		"data":{
-				                    			cgname:$(".applyName").val(),	
-				                    			cgpid:$(".applyId").val(),		
-				                    			cgnumber:$(".applyPhone").val(),
-				                    			cgwpname:$(".applybuyName").val(),
-				                    			cgwpsl:$(".applybuyNum").val(),	
-				                    			cgyy:$(".applybuyWhy").val()
+				                    			cgname:$("#cgname").val(),	
+				                    			cgpid:$("#cgpid").val(),		
+				                    			cgnumber:$("#cgnumber").val(),
+				                    			cgwpname:$("#cgwpname").val(),
+				                    			cgwpsl:$("#cgwpsl").val(),	
+				                    			cgyy:$("#cgyy").val()
 				                    		},
 				                    		shelter: '正在提交申购单，请稍侯…',
 				                    		success:function(){
