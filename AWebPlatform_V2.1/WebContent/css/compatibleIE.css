@@ -1,13 +1,15 @@
 /* css3 hover样式兼容*/
-.mask{
-	filter:alpha(opacity=80);
+.mask {
+	filter: alpha(opacity = 80);
 }
-.bg{
-    background-position: center top;
-    background-repeat: repeat;
+
+.bg {
+	background-position: center top;
+	background-repeat: repeat;
 }
-.bootstrap-upload-input{
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+
+.bootstrap-upload-input {
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
 }
 /* .nav-tabs > .active > a, 
 .nav-tabs > .active > a:active, 

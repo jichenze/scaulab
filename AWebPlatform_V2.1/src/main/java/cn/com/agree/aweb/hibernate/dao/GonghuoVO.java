@@ -34,8 +34,17 @@ public class GonghuoVO {
 	@Column(name="gonghuo_shuliang")
 	private String gonghuo_sl;
 	
-	@Column(name="gonghuo_Name")
-	private String gonghuo_name;
+	@Column(name="gonghuo_wpName")
+	private String gonghuo_wpname;
+	
+	@Column(name="gonghuo_wpleixing")
+	private String gonghuo_wplx;
+	
+	@Column(name="gonghuo_ccdidian")
+	private String gonghuo_ccdd;
+	
+	@Column(name="gonghuo_ccdanwei")
+	private String gonghuo_ccdw;
 	
 	public GonghuoVO(){
 		super();
@@ -89,11 +98,35 @@ public class GonghuoVO {
 		this.gonghuo_sl = gonghuo_sl;
 	}
 
-	public String getGonghuo_name() {
-		return gonghuo_name;
+	public String getGonghuo_wpname() {
+		return gonghuo_wpname;
 	}
 
-	public void setGonghuo_name(String gonghuo_name) {
-		this.gonghuo_name = gonghuo_name;
+	public void setGonghuo_wpname(String gonghuo_wpname) {
+		this.gonghuo_wpname = gonghuo_wpname;
+	}
+
+	public String getGonghuo_wplx() {
+		return gonghuo_wplx;
+	}
+
+	public void setGonghuo_wplx(String gonghuo_wplx) {
+		this.gonghuo_wplx = gonghuo_wplx;
+	}
+
+	public String getGonghuo_ccdd() {
+		return gonghuo_ccdd;
+	}
+
+	public void setGonghuo_ccdd(String gonghuo_ccdd) {
+		this.gonghuo_ccdd = gonghuo_ccdd;
+	}
+
+	public String getGonghuo_ccdw() {
+		return gonghuo_ccdw;
+	}
+
+	public void setGonghuo_ccdw(String gonghuo_ccdw) {
+		this.gonghuo_ccdw = gonghuo_ccdw;
 	}
 }

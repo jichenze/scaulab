@@ -6,19 +6,21 @@
 
 <struts>
 	<constant name="struts.devMode" value="false" />
-	<constant name="struts.ui.theme" value="simple"/>
+	<constant name="struts.ui.theme" value="simple" />
 	<constant name="struts.i18n.encoding" value="UTF-8" />
-	
-	<bean type="org.apache.struts2.dispatcher.multipart.MultiPartRequest" name="requestParser" 
-		class="cn.com.agree.aweb.struts2.action.support.RefactorMultiPartRequest" scope="default" optional="true" />
-  	
-	<!-- 上传文件配置 -->			
-	<constant name="struts.multipart.maxSize" value="524288000"/>
-	<constant name="struts.multipart.saveDir" value="repository"/>
+
+	<bean type="org.apache.struts2.dispatcher.multipart.MultiPartRequest"
+		name="requestParser"
+		class="cn.com.agree.aweb.struts2.action.support.RefactorMultiPartRequest"
+		scope="default" optional="true" />
+
+	<!-- 上传文件配置 -->
+	<constant name="struts.multipart.maxSize" value="524288000" />
+	<constant name="struts.multipart.saveDir" value="repository" />
 	<constant name="struts.multipart.parser" value="requestParser" />
-	
+
 	<constant name="struts.action.extension" value="do" />
-	
+
 	<!-- map -->
 	<include file="struts2/struts-aweb.xml"></include>
 </struts>

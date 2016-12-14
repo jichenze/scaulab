@@ -11,27 +11,28 @@
 %>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta http-equiv="Cache-Control" content="no-cache"/>
-    <meta name="msapplication-tap-highlight" content="no"/>
-    <meta content="minimal-ui" name="viewport"/>
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
-            name="viewport"/>
-    <meta content="yes" name="apple-mobile-web-app-capable"/>
-    <title>AWeb 2.1</title>
-    <style id="#bgStyle"></style>
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
-    <link rel="stylesheet" type="text/css"
-          href="css/bootstrap-responsive.min.css"/>
-    <link rel="stylesheet" type="text/css" href="css/bootstrap-switch.css"/>
-    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/jquery.dataTables.css">
-    <link rel="stylesheet" type="text/css" href="./css/jquery.jOrgChart.css"/>
-    <link rel="stylesheet" type="text/css" href="./css/jquery-ui.css"/>
-    <link rel="stylesheet" type="text/css"
-          href="css/zTreeStyle/zTreeStyle.css">
-    <link rel="stylesheet" type="text/css" href="css/common.css"/>
-    <!--[if lt IE 10]>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Cache-Control" content="no-cache" />
+<meta name="msapplication-tap-highlight" content="no" />
+<meta content="minimal-ui" name="viewport" />
+<meta
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+	name="viewport" />
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<title>AWeb 2.1</title>
+<style id="#bgStyle"></style>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css"
+	href="css/bootstrap-responsive.min.css" />
+<link rel="stylesheet" type="text/css" href="css/bootstrap-switch.css" />
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/jquery.dataTables.css">
+<link rel="stylesheet" type="text/css" href="./css/jquery.jOrgChart.css" />
+<link rel="stylesheet" type="text/css" href="./css/jquery-ui.css" />
+<link rel="stylesheet" type="text/css"
+	href="css/zTreeStyle/zTreeStyle.css">
+<link rel="stylesheet" type="text/css" href="css/common.css" />
+<!--[if lt IE 10]>
     <link rel="stylesheet" type="text/css" href="css/compatibleIE.css"/>
     <![endif]-->
 </head>
@@ -46,120 +47,124 @@
 		<div class="accordion aside-menu" id="asideMenuList">
 			<%--测试用 --%>
 			<div class="accordion-group">
-			    <div class="accordion-heading">
-			        <a class="accordion-toggle collapsed hvr-bounce-to-left" data-toggle="collapse" data-parent="#asideMenuList" href="#asideDev1">
-			            <i class="fa   fa-yelp"></i><span>&nbsp;采购</span>
-			            <i class="fa fa-angle-down"></i>
-			        </a>
-			    </div>
-			    <div id="asideDev1" class="accordion-body collapse">
-			        <div class="accordion-inner">
-			            <ul class="nav nav-list">
-			                <!--子菜单项 Start-->
-			                <li><a data-href="buy#apply">采购申请</a></li>
-			                <li><a data-href="buy#reply">采购回复</a></li>
-			                <!--子菜单项 End-->
-			            </ul>
-			        </div>
-			    </div>
-			</div>
-			
-			<div class="accordion-group">
-			    <div class="accordion-heading">
-			        <a class="accordion-toggle collapsed hvr-bounce-to-left" data-toggle="collapse" data-parent="#asideMenuList" href="#asideDev2">
-			            <i class="fa   fa-yelp"></i><span>&nbsp;供货</span>
-			            <i class="fa fa-angle-down"></i>
-			        </a>
-			    </div>
-			    <div id="asideDev2" class="accordion-body collapse">
-			        <div class="accordion-inner">
-			            <ul class="nav nav-list">
-			                <!--子菜单项 Start-->
-			                <li><a data-href="supply#supplyimf">供货信息</a></li>
-			                <!--子菜单项 End-->
-			            </ul>
-			        </div>
-			    </div>
-			</div>
-			
-			<div class="accordion-group">
-			    <div class="accordion-heading">
-			        <a class="accordion-toggle collapsed hvr-bounce-to-left" data-toggle="collapse" data-parent="#asideMenuList" href="#asideDev3">
-			            <i class="fa   fa-yelp"></i><span>&nbsp;存储</span>
-			            <i class="fa fa-angle-down"></i>
-			        </a>
-			    </div>
-			    <div id="asideDev3" class="accordion-body collapse">
-			        <div class="accordion-inner">
-			            <ul class="nav nav-list">
-			                <!--子菜单项 Start-->
-			                <li><a data-href="storage#general">一般实验室物品</a></li>
-			                <li><a data-href="storage#danger">易制毒、剧毒物品</a></li>
-			                <!--子菜单项 End-->
-			            </ul>
-			        </div>
-			    </div>
-			</div>
-			
-			<div class="accordion-group">
-			    <div class="accordion-heading">
-			        <a class="accordion-toggle collapsed hvr-bounce-to-left" data-toggle="collapse" data-parent="#asideMenuList" href="#asideDev4">
-			            <i class="fa   fa-yelp"></i><span>&nbsp;使用</span>
-			            <i class="fa fa-angle-down"></i>
-			        </a>
-			    </div>
-			    <div id="asideDev4" class="accordion-body collapse">
-			        <div class="accordion-inner">
-			            <ul class="nav nav-list">
-			                <!--子菜单项 Start-->
-			                <li><a data-href="use#appointment">预约</a></li>
-			                <li><a data-href="use#review">审核</a></li>
-			                <li><a data-href="use#use">使用</a></li>
-			                <!--子菜单项 End-->
-			            </ul>
-			        </div>
-			    </div>
-			</div>
-			
-			<div class="accordion-group">
-			    <div class="accordion-heading">
-			        <a class="accordion-toggle collapsed hvr-bounce-to-left" data-toggle="collapse" data-parent="#asideMenuList" href="#asideDev5">
-			            <i class="fa   fa-yelp"></i><span>&nbsp;回收</span>
-			            <i class="fa fa-angle-down"></i>
-			        </a>
-			    </div>
-			    <div id="asideDev5" class="accordion-body collapse">
-			        <div class="accordion-inner">
-			            <ul class="nav nav-list">
-			                <!--子菜单项 Start-->
-			                <li><a data-href="recovery#tuihui">退回表</a></li>
-			                <li><a data-href="recovery#cunfan">存放表</a></li>
-			                <li><a data-href="recovery#huishou">回收表</a></li>
-			                <!--子菜单项 End-->
-			            </ul>
-			        </div>
-			    </div>
+				<div class="accordion-heading">
+					<a class="accordion-toggle collapsed hvr-bounce-to-left"
+						data-toggle="collapse" data-parent="#asideMenuList"
+						href="#asideDev1"> <i class="fa   fa-yelp"></i><span>&nbsp;采购</span>
+						<i class="fa fa-angle-down"></i>
+					</a>
+				</div>
+				<div id="asideDev1" class="accordion-body collapse">
+					<div class="accordion-inner">
+						<ul class="nav nav-list">
+							<!--子菜单项 Start-->
+							<li><a data-href="buy#apply">采购申请</a></li>
+							<li><a data-href="buy#reply">采购回复</a></li>
+							<!--子菜单项 End-->
+						</ul>
+					</div>
+				</div>
 			</div>
 
-			
-            <div class="accordion-group">
-                <div class="accordion-heading">
-                    <a class="accordion-toggle collapsed hvr-bounce-to-left" data-toggle="collapse" data-parent="#asideMenuList" href="#asideDev">
-                        <i class="fa fa-yelp"></i>
-                        <span>开发者</span>
-                        <i class="fa fa-angle-down"></i>
-                    </a>
-                </div>
-                <div id="asideDev" class="accordion-body collapse">
-                    <div class="accordion-inner">
-                        <ul class="nav nav-list">
-                            <li><a data-href="awebDevDocs#awebDevDescription">开发说明</a></li>
-                            <li><a data-href="awebDevDocs#awebJSAPIs">前端JS API</a></li>
-                            <li><a data-href="awebDevDocs#awebCssSpecification">前端CSS API</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a class="accordion-toggle collapsed hvr-bounce-to-left"
+						data-toggle="collapse" data-parent="#asideMenuList"
+						href="#asideDev2"> <i class="fa   fa-yelp"></i><span>&nbsp;供货</span>
+						<i class="fa fa-angle-down"></i>
+					</a>
+				</div>
+				<div id="asideDev2" class="accordion-body collapse">
+					<div class="accordion-inner">
+						<ul class="nav nav-list">
+							<!--子菜单项 Start-->
+							<li><a data-href="supply#supplyimf">供货信息</a></li>
+							<!--子菜单项 End-->
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a class="accordion-toggle collapsed hvr-bounce-to-left"
+						data-toggle="collapse" data-parent="#asideMenuList"
+						href="#asideDev3"> <i class="fa   fa-yelp"></i><span>&nbsp;存储</span>
+						<i class="fa fa-angle-down"></i>
+					</a>
+				</div>
+				<div id="asideDev3" class="accordion-body collapse">
+					<div class="accordion-inner">
+						<ul class="nav nav-list">
+							<!--子菜单项 Start-->
+							<li><a data-href="storage#general">一般实验室物品</a></li>
+							<li><a data-href="storage#danger">易制毒、剧毒物品</a></li>
+							<!--子菜单项 End-->
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a class="accordion-toggle collapsed hvr-bounce-to-left"
+						data-toggle="collapse" data-parent="#asideMenuList"
+						href="#asideDev4"> <i class="fa   fa-yelp"></i><span>&nbsp;使用</span>
+						<i class="fa fa-angle-down"></i>
+					</a>
+				</div>
+				<div id="asideDev4" class="accordion-body collapse">
+					<div class="accordion-inner">
+						<ul class="nav nav-list">
+							<!--子菜单项 Start-->
+							<li><a data-href="use#appointment">预约</a></li>
+							<li><a data-href="use#review">审核</a></li>
+							<li><a data-href="use#use">使用</a></li>
+							<!--子菜单项 End-->
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a class="accordion-toggle collapsed hvr-bounce-to-left"
+						data-toggle="collapse" data-parent="#asideMenuList"
+						href="#asideDev5"> <i class="fa   fa-yelp"></i><span>&nbsp;回收</span>
+						<i class="fa fa-angle-down"></i>
+					</a>
+				</div>
+				<div id="asideDev5" class="accordion-body collapse">
+					<div class="accordion-inner">
+						<ul class="nav nav-list">
+							<!--子菜单项 Start-->
+							<li><a data-href="recovery#huishou">回收表</a></li>
+							<!--子菜单项 End-->
+						</ul>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a class="accordion-toggle collapsed hvr-bounce-to-left"
+						data-toggle="collapse" data-parent="#asideMenuList"
+						href="#asideDev"> <i class="fa fa-yelp"></i> <span>开发者</span>
+						<i class="fa fa-angle-down"></i>
+					</a>
+				</div>
+				<div id="asideDev" class="accordion-body collapse">
+					<div class="accordion-inner">
+						<ul class="nav nav-list">
+							<li><a data-href="awebDevDocs#awebDevDescription">开发说明</a></li>
+							<li><a data-href="awebDevDocs#awebJSAPIs">前端JS API</a></li>
+							<li><a data-href="awebDevDocs#awebCssSpecification">前端CSS
+									API</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 	<%--左侧边栏 End--%>
@@ -179,61 +184,76 @@
 	<div id="banner" data-role="banner" class="navbar banner">
 		<div class="navbar-inner">
 			<ul class="nav pull-left banner-menu">
-			   <li><div style="height:60px;width:60px;padding:20px 0 20px 20px"><img src="img/login/logo2.png"></div></li>
-			   <li><div style="height:60px;width:auto;padding:20px 0 20px 8px;color:#fff"><span style=" font-weight:bold;font-size:1.3em">实验室管理系统</span><span id="nowTime" style="line-height:3.2em;display:block;opacity: 0.8;"></span></div></li>
+				<li><div
+						style="height: 60px; width: 60px; padding: 20px 0 20px 20px">
+						<img src="img/login/logo2.png">
+					</div></li>
+				<li><div
+						style="height: 60px; width: auto; padding: 20px 0 20px 8px; color: #fff">
+						<span style="font-weight: bold; font-size: 1.3em">实验室管理系统</span><span
+							id="nowTime"
+							style="line-height: 3.2em; display: block; opacity: 0.8;"></span>
+					</div></li>
 			</ul>
-            <ul id="bannerMenu" class="nav banner-menu"></ul>
-            <ul class="nav pull-right banner-menu">
-                <li><a id="skinChangeShowBtn" href="javascript:" title="皮肤设置"><i
-                        class="fa fa-leaf"></i></a>
-                    <div id="skinChangeContainer" class="skin-change in">
-                        <h4 class="page-header">
-                            <i class="fa fa-leaf"></i>&nbsp;皮肤设置<small id="skinClose"
-                                                                       class="close fa fa-close" title="关闭"></small>
-                        </h4>
-                        <ul class="nav nav-tabs">
-                            <li class="active"><a href="#localPic" data-toggle="tab" data-role="tabs"><i class="fa fa-photo"></i>默认图片</a></li>
-                            <li><a href="#onlinePic" data-toggle="tab"
-                                                  data-role="tabs"><i class="fa fa-paw"></i>网络图片</a></li>
-                            <li><a href="#custom" data-toggle="tab" data-role="tabs"><i class="fa fa-file-photo-o"></i>自定义图片</a></li>
-                        </ul>
-                        <div class="tab-content">
-                            <div class="tab-pane active" id="localPic">
-                                <ul id="localPicList"></ul>
-                            </div>
-                            <div class="tab-pane" id="onlinePic">
-                                <ul id="onlinePicList"></ul>
-                                <div class="noNet hide"><i class="fa fa-frown-o"></i>网络不给力</div>
-                                <a class="next-page-btn btn-green hvr-ripple-out" id="nextPagebtn">换一页</a>
-                            </div>
-                            <div class="tab-pane" id="custom">
-                                <div class="text-center">
-                                    <label for="imageUploadID">点击选择图片：</label>
-                                    <div class="uploadIcon">
-                                        <input id="imageUploadID" name="image" type="file" accept=".jpg,.jpeg,.bmp,.gif,.png" />
-                                        <span class="help-inline hide"></span>
-                                    </div>
-                                    <button id="uploadPicBtn" class="btn btn-inverse hvr-radial-out">上传</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div></li>
-        
-                <li class="dropdown"><a class="dropdown-toggle"
-                                        data-toggle="dropdown" href="javascript:" title="用户管理"> <i
-                        class="fa fa-user"></i>
-                </a>
-                    <ul class="dropdown-menu">
-                        <!-- <li><a href="javascript:" target="_blank"><i
+			<ul id="bannerMenu" class="nav banner-menu"></ul>
+			<ul class="nav pull-right banner-menu">
+				<li><a id="skinChangeShowBtn" href="javascript:" title="皮肤设置"><i
+						class="fa fa-leaf"></i></a>
+					<div id="skinChangeContainer" class="skin-change in">
+						<h4 class="page-header">
+							<i class="fa fa-leaf"></i>&nbsp;皮肤设置<small id="skinClose"
+								class="close fa fa-close" title="关闭"></small>
+						</h4>
+						<ul class="nav nav-tabs">
+							<li class="active"><a href="#localPic" data-toggle="tab"
+								data-role="tabs"><i class="fa fa-photo"></i>默认图片</a></li>
+							<li><a href="#onlinePic" data-toggle="tab" data-role="tabs"><i
+									class="fa fa-paw"></i>网络图片</a></li>
+							<li><a href="#custom" data-toggle="tab" data-role="tabs"><i
+									class="fa fa-file-photo-o"></i>自定义图片</a></li>
+						</ul>
+						<div class="tab-content">
+							<div class="tab-pane active" id="localPic">
+								<ul id="localPicList"></ul>
+							</div>
+							<div class="tab-pane" id="onlinePic">
+								<ul id="onlinePicList"></ul>
+								<div class="noNet hide">
+									<i class="fa fa-frown-o"></i>网络不给力
+								</div>
+								<a class="next-page-btn btn-green hvr-ripple-out"
+									id="nextPagebtn">换一页</a>
+							</div>
+							<div class="tab-pane" id="custom">
+								<div class="text-center">
+									<label for="imageUploadID">点击选择图片：</label>
+									<div class="uploadIcon">
+										<input id="imageUploadID" name="image" type="file"
+											accept=".jpg,.jpeg,.bmp,.gif,.png" /> <span
+											class="help-inline hide"></span>
+									</div>
+									<button id="uploadPicBtn"
+										class="btn btn-inverse hvr-radial-out">上传</button>
+								</div>
+							</div>
+						</div>
+					</div></li>
+
+				<li class="dropdown"><a class="dropdown-toggle"
+					data-toggle="dropdown" href="javascript:" title="用户管理"> <i
+						class="fa fa-user"></i>
+				</a>
+					<ul class="dropdown-menu">
+						<!-- <li><a href="javascript:" target="_blank"><i
                                 class="fa fa-newspaper-o"></i>&nbsp;基本信息</a></li> -->
-                        <li><a id="usersafebtn" href="javascript:">&nbsp;<i
-                                class="fa fa-unlock-alt"></i>&nbsp;&nbsp;修改密码
-                        </a></li>
-                        <li><a id="signOut" href="javascript:" title="退出登录"><i
-                                class="fa fa-sign-out"></i>&nbsp;退出登录</a></li>
-                    </ul>
-                <li>
-            </ul>
+						<li><a id="usersafebtn" href="javascript:">&nbsp;<i
+								class="fa fa-unlock-alt"></i>&nbsp;&nbsp;修改密码
+						</a></li>
+						<li><a id="signOut" href="javascript:" title="退出登录"><i
+								class="fa fa-sign-out"></i>&nbsp;退出登录</a></li>
+					</ul>
+				<li>
+			</ul>
 		</div>
 	</div>
 	<%--导航栏 End--%>
@@ -280,18 +300,18 @@
 	<%--内容 Start--%>
 	<div data-role="container" class="content-container hidden">
 		<%--选项卡 Start--%>
-            <%--右键按钮 Start--%>
-            <ul id="tabsContextMenu" class="tab-content-menu hide"></ul>
-            <%--右键按钮 End--%>
+		<%--右键按钮 Start--%>
+		<ul id="tabsContextMenu" class="tab-content-menu hide"></ul>
+		<%--右键按钮 End--%>
 		<div id="tabsContainer" class="tabs-container">
 			<div class="tabs-left-group">
-			<button id="asideMenu" class="brand" title="菜单">
-                <i class="fa fa-navicon fa-2x"></i>
-			</button>
-			<button id="tabsLeft" type="button" title="左移标签"
-				class="btn tabs-left hidden">
-				<i class="fa fa-chevron-left"></i>
-			</button>
+				<button id="asideMenu" class="brand" title="菜单">
+					<i class="fa fa-navicon fa-2x"></i>
+				</button>
+				<button id="tabsLeft" type="button" title="左移标签"
+					class="btn tabs-left hidden">
+					<i class="fa fa-chevron-left"></i>
+				</button>
 			</div>
 			<ul id="tabs" data-role="tab" class="nav nav-tabs tabs">
 			</ul>
@@ -300,7 +320,8 @@
 					class="btn tabs-right hidden">
 					<i class="fa fa-chevron-right"></i>
 				</button>
-				<button id="tabsFull" title="全屏" data-retract-title="还原" data-full-title="全屏" type="button" class="btn tabs-full">
+				<button id="tabsFull" title="全屏" data-retract-title="还原"
+					data-full-title="全屏" type="button" class="btn tabs-full">
 					<i class="fa fa-expand"></i>
 				</button>
 			</div>
@@ -338,7 +359,7 @@
 	<%--标签tab模板、信息alert模板 End--%>
 	<%--模板 End--%>
 	<%--引入脚本 Start--%>
-    <script>/*设置背景图的*/
+	<script>/*设置背景图的*/
     (function(){
         function getCookie (name) {
             try {
@@ -383,7 +404,8 @@
         }
     })();
     </script>
-	<script type="text/javascript" src="script/lib/require.js" data-main="bootloader"></script>
+	<script type="text/javascript" src="script/lib/require.js"
+		data-main="bootloader"></script>
 	<%--引入脚本 End--%>
 	<%--登出跳转到登陆页面 Start--%>
 	<form id="redirectForm" action="LoginAction_redirect.do" method="POST"></form>

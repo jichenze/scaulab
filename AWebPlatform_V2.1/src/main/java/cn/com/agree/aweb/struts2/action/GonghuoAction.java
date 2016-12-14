@@ -1,25 +1,18 @@
 package cn.com.agree.aweb.struts2.action;
 
-import java.io.Serializable;
-import java.util.List;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import cn.com.agree.aweb.Constants;
-import cn.com.agree.aweb.exception.AWebException;
 import cn.com.agree.aweb.exception.DBSupportException;
-import cn.com.agree.aweb.exception.ExceptionTypes;
-import cn.com.agree.aweb.hibernate.dao.AWebUserVO;
+import cn.com.agree.aweb.hibernate.dao.CunchuVO;
 import cn.com.agree.aweb.hibernate.dao.GonghuoVO;
 import cn.com.agree.aweb.struts2.action.support.StandardActionSupport;
 import cn.com.agree.aweb.struts2.action.support.StrutsMessage;
 import cn.com.agree.aweb.util.CommonUtils;
-import cn.com.agree.aweb.util.DES;
 
 /**
- * 供货信息增加与查询
- * add , findAll
+ * 供货信息
+ * add , loadAll
  */
 public class GonghuoAction extends StandardActionSupport {
 	
@@ -31,9 +24,12 @@ public class GonghuoAction extends StandardActionSupport {
 	private String ghrname;
 	private String ghtime;
 	private String ghpn;
-	private String ghsrname;
-	private String ghname;
+	private String ghsrname;//接收人
+	private String ghwpname;
 	private String ghsl;
+	private String ghlx;//物品类型
+	private String ghccdw;//物品存储单位
+	private String ghccdd;//物品存储地点
 	
 	private StrutsMessage strutsMessage;
 	
@@ -67,9 +63,16 @@ public class GonghuoAction extends StandardActionSupport {
 			gh.setGonghuo_phone(ghpn);
 			gh.setGonghuo_sname(ghsrname);
 			gh.setGonghuo_sl(ghsl);
-			gh.setGonghuo_name(ghname);
+			gh.setGonghuo_wpname(ghwpname);
+			gh.setGonghuo_wplx(ghlx);
+			gh.setGonghuo_ccdd(ghccdd);
+			gh.setGonghuo_ccdw(ghccdw);
 				
 			this.dbOperation.saveSingleData(gh);
+			
+			//对存储信息进行保存或修改记录,  此处使用的 id 参数 是否需要与CunchuVO 的id 名称相同？
+			updateCunchu();
+			
 			strutsMessage = StrutsMessage.successMessage();
 			strutsMessage.addParameter("gh",gh);
 		} catch (DBSupportException e) {
@@ -81,6 +84,44 @@ public class GonghuoAction extends StandardActionSupport {
 			log.info("创建供货信息",  ghid);
 		}
 		return SUCCESS;
+	}
+	
+	/**
+	 * 更新存储信息
+	 * 
+	 */
+	@SuppressWarnings("null")
+	public void updateCunchu(){
+		try {
+			CunchuVO cc = (CunchuVO) this.dbOperation.queryDataById(CunchuVO.class, ghwpname);
+			if(cc!=null){		//物品存在，则增加其数量，修改其更新时间
+				int a= Integer.parseInt(cc.getCunchu_liang());
+				int b= Integer.parseInt(ghsl);
+				int count= a+b;
+				String s= ""+count;//此处可能有bug
+				cc.setCunchu_liang(s);
+				cc.setCunchu_updatetime(CommonUtils.getNowTime());
+				
+			}else{		//物品不存在，则新增物品信息
+				cc.setCunchu_name(ghwpname);
+				cc.setCunchu_lx(ghlx);
+				cc.setCunchu_liang(ghsl);
+				cc.setCunchu_dw(ghccdw);
+				cc.setCunchu_dd(ghccdd);
+				cc.setCunchu_updatetime(CommonUtils.getNowTime());				
+			}
+			
+			this.dbOperation.saveOrUpdateSingleData(cc);
+			strutsMessage = StrutsMessage.successMessage();
+			strutsMessage.addParameter("cc",cc);
+		} catch (DBSupportException e) {
+			strutsMessage = StrutsMessage.errorMessage(e.getMessage());
+		}
+		if(strutsMessage.isStatus() ==false){
+			log.error("更新存储信息", strutsMessage.getErrorMsg());
+		}else{
+			log.info("更新存储信息",  ghwpname);
+		}
 	}
 
 	public String getGhid() {
@@ -123,20 +164,44 @@ public class GonghuoAction extends StandardActionSupport {
 		this.ghsrname = ghsrname;
 	}
 
-	public String getGhname() {
-		return ghname;
-	}
-
-	public void setGhname(String ghname) {
-		this.ghname = ghname;
-	}
-
 	public String getGhsl() {
 		return ghsl;
 	}
 
 	public void setGhsl(String ghsl) {
 		this.ghsl = ghsl;
+	}
+
+	public String getGhwpname() {
+		return ghwpname;
+	}
+
+	public void setGhwpname(String ghwpname) {
+		this.ghwpname = ghwpname;
+	}
+
+	public String getGhlx() {
+		return ghlx;
+	}
+
+	public void setGhlx(String ghlx) {
+		this.ghlx = ghlx;
+	}
+
+	public String getGhccdw() {
+		return ghccdw;
+	}
+
+	public void setGhccdw(String ghccdw) {
+		this.ghccdw = ghccdw;
+	}
+
+	public String getGhccdd() {
+		return ghccdd;
+	}
+
+	public void setGhccdd(String ghccdd) {
+		this.ghccdd = ghccdd;
 	}
 
 	public StrutsMessage getStrutsMessage() {

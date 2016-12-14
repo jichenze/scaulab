@@ -78,12 +78,6 @@
             </result>
         </action>
         
-        <action name="BaseAction_*" class="BaseActionBean" method="{1}">
-            <result name="success" type="json">
-                <param name="root">strutsMessage</param>
-            </result>
-        </action>
-        
         <!-- add by zhou.yh -->
          <action name="CamaComponentPagesAction_*" class="CamaComponentPagesActionBean" method="{1}">
             <result name="success" type="json">
@@ -102,8 +96,7 @@
             <result name="success" type="json">
                 <param name="root">strutsMessage</param>
             </result>
-        </action>
-       
+        </action>       
         
         <!-- 供货 -->
         <action name="GonghuoAction_*" class="GonghuoActionBean" method="{1}">
@@ -119,12 +112,24 @@
             </result>
         </action>
         
-        <!-- 使用 -->
+        <!-- 使用的预约和审核 -->
         <action name="ShiyongAction_*" class="ShiyongActionBean" method="{1}">
             <result name="success" type="json">
                 <param name="root">strutsMessage</param>
             </result>
         </action>
+        <!-- 使用的领用 -->
+        <action name="LingyongAction_*" class="LingyongActionBean" method="{1}">
+            <result name="success" type="json">
+                <param name="root">strutsMessage</param>
+            </result>
+        </action>
+        
         <!-- 回收 -->
+         <action name="HuishouAction_*" class="HuishouActionBean" method="{1}">
+            <result name="success" type="json">
+                <param name="root">strutsMessage</param>
+            </result>
+        </action>
     </package>
 </struts>

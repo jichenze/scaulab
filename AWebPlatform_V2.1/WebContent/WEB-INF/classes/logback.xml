@@ -8,9 +8,9 @@
 			</pattern>
 		</encoder>
 	</appender>
-	
-	<timestamp key="byData" datePattern="yyyy-MM-dd"/>
-	
+
+	<timestamp key="byData" datePattern="yyyy-MM-dd" />
+
 	<!-- ch.qos.logback.core.rolling.RollingFileAppender 文件日志输出 -->
 	<appender name="file"
 		class="ch.qos.logback.core.rolling.RollingFileAppender">
@@ -29,12 +29,12 @@
 			</pattern>
 		</layout>
 	</appender>
-	
+
 	<!-- 日志级别 -->
 	<root>
 		<!-- 定义了ERROR和INFO级别的日志，分别在FILE文件和控制台输出 -->
-		<level value="info"/>
-		<appender-ref ref="file"/>
-		<appender-ref ref="console"/>
+		<level value="info" />
+		<appender-ref ref="file" />
+		<appender-ref ref="console" />
 	</root>
 </configuration>

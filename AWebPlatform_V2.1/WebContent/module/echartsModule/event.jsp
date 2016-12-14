@@ -1,7 +1,6 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java"%>
 <%@ page session="false"%>
 <style type="text/css">
-
 .mainapp-echarts-ctn {
 	position: relative;
 	margin: 20px 20px 20px 12px;
@@ -60,18 +59,19 @@
 
 
 <button id="loadTableBtn" draggable='true'>表格</button>
-<div id="testTableCtn" style="width:99%;height:200px;border:solid 1px gray;margin:12px 0 10px 0;box-shadow:2px 2px 2px 2px gray;border-radius:2px;overflow:scroll;padding-top:10px;"></div>
+<div id="testTableCtn"
+	style="width: 99%; height: 200px; border: solid 1px gray; margin: 12px 0 10px 0; box-shadow: 2px 2px 2px 2px gray; border-radius: 2px; overflow: scroll; padding-top: 10px;"></div>
 
 <button id="loadLineDataBtn" draggable='true'>固定图例图例动态x轴加载数据</button>
-<div id="testLineCtn" style="width:100%;height:250px"></div>
+<div id="testLineCtn" style="width: 100%; height: 250px"></div>
 <button id="loadLine2DataBtn">动态x轴动态图例</button>
-<div id="testLine2Ctn" style="width:100%;height:250px"></div>
+<div id="testLine2Ctn" style="width: 100%; height: 250px"></div>
 <button id="loadLine3DataBtn">动态加点折线图</button>
-<div id="testLine3Ctn" style="width:100%;height:250px"></div>
+<div id="testLine3Ctn" style="width: 100%; height: 250px"></div>
 <button id="loadDataBtn">固定图例加载数据</button>
 <button id="loadDataBtn2">动态图例加载数据</button>
-<div id="testPieCtn" style="width:100%;height:250px"></div>
-<div id="testPie2Ctn" style="width:100%;height:250px"></div>
+<div id="testPieCtn" style="width: 100%; height: 250px"></div>
+<div id="testPie2Ctn" style="width: 100%; height: 250px"></div>
 
 
 <!-- 模态框start -->
@@ -86,26 +86,21 @@
 		<table style="margin-left: 30px;">
 			<tr>
 				<td>指标</td>
-				<td>
-				   <select data-role="classifySel">
-				         <option value="">--请选择--</option>
-				   </select>
-				 </td>
+				<td><select data-role="classifySel">
+						<option value="">--请选择--</option>
+				</select></td>
 			</tr>
 			<tr>
 				<td>图表类型</td>
-				<td>
-				   <select data-role="showTypeSel">
-				      <option value="">--请选择--</option>
-				   </select>
-				 </td>
+				<td><select data-role="showTypeSel">
+						<option value="">--请选择--</option>
+				</select></td>
 			</tr>
 			<tr>
 				<td>类型</td>
 				<td><select data-role="stateSel">
-				        <option value="">--请选择--</option>
-						</select>
-				</td>
+						<option value="">--请选择--</option>
+				</select></td>
 			</tr>
 
 		</table>

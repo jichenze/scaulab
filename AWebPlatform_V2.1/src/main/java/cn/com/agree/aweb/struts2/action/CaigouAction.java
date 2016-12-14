@@ -1,17 +1,11 @@
 package cn.com.agree.aweb.struts2.action;
 
-import java.io.Serializable;
-import java.util.List;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import cn.com.agree.aweb.exception.AWebException;
 import cn.com.agree.aweb.exception.DBSupportException;
-import cn.com.agree.aweb.exception.ExceptionTypes;
-import cn.com.agree.aweb.hibernate.dao.AWebUserVO;
 import cn.com.agree.aweb.hibernate.dao.CaigouVO;
-import cn.com.agree.aweb.platform.access.UserManagerAction;
 import cn.com.agree.aweb.struts2.action.support.StandardActionSupport;
 import cn.com.agree.aweb.struts2.action.support.StrutsMessage;
 import cn.com.agree.aweb.util.CommonUtils;
@@ -33,10 +27,10 @@ public class CaigouAction extends StandardActionSupport {
 	private String cgwpname;
 	private String cgwpsl;
 	private String cgyy;
-	private String cgyn;//是否通过
-	private String cgpl;//采购批量
-	private String cgdate;//采购日期
-	private String cgshyy;//不通过原因
+	private String cgyn;
+	private String cgpl;
+	private String cgdate;
+	private String cgshyy;
 	
 	private StrutsMessage strutsMessage;
 	
@@ -78,22 +72,6 @@ public class CaigouAction extends StandardActionSupport {
 	 * @return
 	 * @throws Throwable 
 	 */
-	@SuppressWarnings("unchecked")
-//	public List<CaigouShenqingVO> findAllShenqing()  throws AWebException {
-//		List<CaigouShenqingVO> sqList= null;
-//		try {
-//			sqList = (List<CaigouShenqingVO>)this.dbOperation.queryAllDataByClass
-//										(CaigouShenqingVO.class);
-//			
-//			if(sqList.size() >=1)
-//				return sqList;
-//		} catch (DBSupportException e) {
-//			strutsMessage = StrutsMessage.errorMessage(e.getMessage());
-//			handleException(ExceptionTypes.AWEB.AWEB50, e);
-//		}
-//		
-//		return null;
-//	}
 	
 	/**
 	 * 采购列表

@@ -18,8 +18,8 @@ public class CunchuVO {
 	@Column(name="cunchu_Name", unique=true)
 	private String cunchu_name;
 	
-	@Column(name="cunchu_xingzhi")
-	private String cunchu_xz;
+	@Column(name="cunchu_leixing")
+	private String cunchu_lx;
 	
 	@Column(name="cunchu_danwei")
 	private String cunchu_dw;
@@ -27,17 +27,11 @@ public class CunchuVO {
 	@Column(name="cunchu_didian")
 	private String cunchu_dd;
 	
-	@Column(name="cunchu_date")
-	private String cunchu_date;
+	@Column(name="cunchu_updatetime")
+	private String cunchu_updatetime;
 	
 	@Column(name="cunchu_liang")
 	private String cunchu_liang;
-	
-	@Column(name="cunchu_renName")
-	private String cunchu_rname;
-	
-	@Column(name="cunchu_shengYu")
-	private String cunchu_sy;
 	
 	public CunchuVO(){
 		super();
@@ -51,12 +45,12 @@ public class CunchuVO {
 		this.cunchu_name = cunchu_name;
 	}
 
-	public String getCunchu_xz() {
-		return cunchu_xz;
+	public String getCunchu_lx() {
+		return cunchu_lx;
 	}
 
-	public void setCunchu_xz(String cunchu_xz) {
-		this.cunchu_xz = cunchu_xz;
+	public void setCunchu_lx(String cunchu_lx) {
+		this.cunchu_lx = cunchu_lx;
 	}
 
 	public String getCunchu_dw() {
@@ -75,12 +69,12 @@ public class CunchuVO {
 		this.cunchu_dd = cunchu_dd;
 	}
 
-	public String getCunchu_date() {
-		return cunchu_date;
+	public String getCunchu_updatetime() {
+		return cunchu_updatetime;
 	}
 
-	public void setCunchu_date(String cunchu_date) {
-		this.cunchu_date = cunchu_date;
+	public void setCunchu_updatetime(String cunchu_updatetime) {
+		this.cunchu_updatetime = cunchu_updatetime;
 	}
 
 	public String getCunchu_liang() {
@@ -89,21 +83,5 @@ public class CunchuVO {
 
 	public void setCunchu_liang(String cunchu_liang) {
 		this.cunchu_liang = cunchu_liang;
-	}
-
-	public String getCunchu_rname() {
-		return cunchu_rname;
-	}
-
-	public void setCunchu_rname(String cunchu_rname) {
-		this.cunchu_rname = cunchu_rname;
-	}
-
-	public String getCunchu_sy() {
-		return cunchu_sy;
-	}
-
-	public void setCunchu_sy(String cunchu_sy) {
-		this.cunchu_sy = cunchu_sy;
 	}
 }

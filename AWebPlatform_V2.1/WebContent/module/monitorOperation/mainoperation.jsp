@@ -6,7 +6,6 @@
 	margin: 10px;
 	height: 250px;
 	width: 100%;
-	
 }
 
 .mainoperation-echarts-ctn-detail {
@@ -76,7 +75,7 @@
 	width: 55%;
 }
 
-.ech-fig>h6, .ech-fig>span {
+.ech-fig>h6,.ech-fig>span {
 	position: relative;
 	top: -100px;
 }
@@ -95,9 +94,7 @@
 	font-size: 24px;
 }
 /*系统列表end*/
-
-
-ul, li {
+ul,li {
 	margin: 0;
 	padding: 0
 }
@@ -118,7 +115,7 @@ ul, li {
 </style>
 
 <!-- 图表 start-->
-<div data-role="" class="mainoperation-echarts-ctn" >
+<div data-role="" class="mainoperation-echarts-ctn">
 	<div data-role="testLineCtn1" class="mainoperation-echarts-ctn-detail"></div>
 	<div data-role="testLineCtn2" class="mainoperation-echarts-ctn-detail"></div>
 	<div data-role="testLineCtn3" class="mainoperation-echarts-ctn-detail"></div>
@@ -127,19 +124,19 @@ ul, li {
 
 <!-- 事件滚动start -->
 <div id="scrollDiv"
-		style="border: 1px dotted red; width: 99%; margin: 15px;">
-		<ul style="overflow: hidden">
-			<li>这是公告标题的第一行</li>
-			<li>这是公告标题的第二行</li>
-			<li style="overflow: hidden">这是公告标题的第三行
-				这是公告标题的第三行这是公告标题的第三行这是公告标题的第三行这是公告标题的第三行这是公告标题的第三行这是公告标题的第三行这是公告标题的第三行这是公告标题的第三行这是公告标题的第三行这是公告标题的第三行这是公告标题的第三行这是公告标题的第三行</li>
-			<li>这是公告标题的第四行</li>
-			<li>这是公告标题的第五行</li>
-			<li>这是公告标题的第六行</li>
-			<li>这是公告标题的第七行</li>
-			<li>这是公告标题的第八行</li>
-		</ul>
-	</div>
+	style="border: 1px dotted red; width: 99%; margin: 15px;">
+	<ul style="overflow: hidden">
+		<li>这是公告标题的第一行</li>
+		<li>这是公告标题的第二行</li>
+		<li style="overflow: hidden">这是公告标题的第三行
+			这是公告标题的第三行这是公告标题的第三行这是公告标题的第三行这是公告标题的第三行这是公告标题的第三行这是公告标题的第三行这是公告标题的第三行这是公告标题的第三行这是公告标题的第三行这是公告标题的第三行这是公告标题的第三行这是公告标题的第三行</li>
+		<li>这是公告标题的第四行</li>
+		<li>这是公告标题的第五行</li>
+		<li>这是公告标题的第六行</li>
+		<li>这是公告标题的第七行</li>
+		<li>这是公告标题的第八行</li>
+	</ul>
+</div>
 <!-- 事件滚动 end -->
 
 <!-- 系统列表start-->

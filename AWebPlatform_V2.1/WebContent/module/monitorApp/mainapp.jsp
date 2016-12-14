@@ -85,7 +85,7 @@
 	background-color: rgba(22, 22, 22, .4);
 }
 
-ul, li {
+ul,li {
 	margin: 0;
 	padding: 0
 }
@@ -151,7 +151,7 @@ ul, li {
 	width: 55%;
 }
 
-.ech-fig>h6, .ech-fig>span {
+.ech-fig>h6,.ech-fig>span {
 	position: relative;
 	top: -100px;
 }
@@ -231,13 +231,13 @@ ul, li {
 	</div>
 </div>
 <!-- 工单 end-->
- <div id="homeGrid">
+<div id="homeGrid">
 	<div class="row-fluid">
 		<div class="hm-cell" data-index="0" id="monitor" data-role="test"></div>
 		<div class="hm-cell" data-index="1" id="service"></div>
 		<div class="hm-cell" data-index="2" id="things"></div>
 	</div>
-</div> 
+</div>
 <table data-role="test3"></table>
 <!-- 图表 start-->
 <div data-role="" class="mainapp-echarts-ctn">
@@ -312,35 +312,30 @@ ul, li {
 		<table style="margin-left: 30px;">
 			<tr>
 				<td>指标</td>
-				<td>
-				   <select data-role="classifySel">
-				         <option value="">--请选择--</option>
-				     <!--  <option value="cpu">cpu</option>
+				<td><select data-role="classifySel">
+						<option value="">--请选择--</option>
+						<!--  <option value="cpu">cpu</option>
 				      <option value="jvm">jvm</option> -->
-				   </select>
-				 </td>
+				</select></td>
 			</tr>
 			<tr>
 				<td>图表类型</td>
-				<td>
-				   <select data-role="showTypeSel">
-				      <option value="">--请选择--</option>
-				      <!-- <option value="line">line</option>
+				<td><select data-role="showTypeSel">
+						<option value="">--请选择--</option>
+						<!-- <option value="line">line</option>
 					  <option value="pie">pie</option> -->
-				   </select>
-				 </td>
+				</select></td>
 			</tr>
 			<tr>
 				<td>类型</td>
 				<td><select data-role="stateSel">
-				        <option value="">--请选择--</option>
-				       <!--  <option value="0_1">固定图例动态x轴</option>
+						<option value="">--请选择--</option>
+						<!--  <option value="0_1">固定图例动态x轴</option>
 						<option value="1_1">动态图例动态x轴</option>
 						<option value="2">固定图例动态点</option>
 						<option value="0">饼状图固定图例动态点</option>
 						<option value="1">饼状图图例动态点</option> -->
-						</select>
-				</td>
+				</select></td>
 			</tr>
 
 		</table>

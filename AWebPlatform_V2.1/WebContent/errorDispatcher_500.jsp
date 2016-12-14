@@ -13,5 +13,5 @@
 %>
 
 <%if(isAjax){%>
-	<%response.setHeader("Content-Type", "application/json");out.clear();%><%=message.jsonString()%>
+<%response.setHeader("Content-Type", "application/json");out.clear();%><%=message.jsonString()%>
 <%}%>

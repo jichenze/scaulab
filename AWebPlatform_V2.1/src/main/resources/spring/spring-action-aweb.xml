@@ -2,61 +2,82 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
-	
-	<bean id="LoginActionBean" class="cn.com.agree.aweb.struts2.action.LoginAction" scope="prototype">
-        <property name="dbOperation" ref="hibernateDao"></property>
-    </bean>
-    <bean id="SessionSyncActionBean" class="cn.com.agree.aweb.struts2.action.SessionSyncAction" scope="prototype">
-        <property name="dbOperation" ref="hibernateDao"></property>
-    </bean>
-    <bean id="UserManagerActionBean" class="cn.com.agree.aweb.platform.access.UserManagerAction" scope="prototype">
-        <property name="dbOperation" ref="hibernateDao"></property>
-    </bean>
-    <bean id="RoleManagerActionBean" class="cn.com.agree.aweb.platform.access.RoleManagerAction" scope="prototype">
-        <property name="dbOperation" ref="hibernateDao"></property>
-    </bean>
 
-	<bean id="TestChartsActionBean" class="cn.com.agree.aweb.struts2.action.TestChartsAction" scope="prototype">
+	<bean id="LoginActionBean" class="cn.com.agree.aweb.struts2.action.LoginAction"
+		scope="prototype">
 		<property name="dbOperation" ref="hibernateDao"></property>
 	</bean>
-	
-	<bean id="MenuDataActionBean" class="cn.com.agree.aweb.struts2.action.MenuDataAction" scope="prototype">
+	<bean id="SessionSyncActionBean" class="cn.com.agree.aweb.struts2.action.SessionSyncAction"
+		scope="prototype">
 		<property name="dbOperation" ref="hibernateDao"></property>
 	</bean>
-	<bean id="GridOperActionBean" class="cn.com.agree.aweb.struts2.action.GridOperAction" scope="prototype">
+	<bean id="UserManagerActionBean" class="cn.com.agree.aweb.platform.access.UserManagerAction"
+		scope="prototype">
 		<property name="dbOperation" ref="hibernateDao"></property>
 	</bean>
-	<bean id="ClassifyConfigActionBean" class="cn.com.agree.aweb.struts2.action.ClassifyConfigAction" scope="prototype">
+	<bean id="RoleManagerActionBean" class="cn.com.agree.aweb.platform.access.RoleManagerAction"
+		scope="prototype">
 		<property name="dbOperation" ref="hibernateDao"></property>
 	</bean>
-	<bean id="BaseActionBean" class="cn.com.agree.aweb.struts2.action.BaseAction" scope="prototype">
+
+	<bean id="TestChartsActionBean" class="cn.com.agree.aweb.struts2.action.TestChartsAction"
+		scope="prototype">
 		<property name="dbOperation" ref="hibernateDao"></property>
 	</bean>
-	
-	<bean id="FineDegreeBean" class="cn.com.agree.aweb.struts2.action.FineDegreeAction" scope="prototype">
+
+	<bean id="MenuDataActionBean" class="cn.com.agree.aweb.struts2.action.MenuDataAction"
+		scope="prototype">
 		<property name="dbOperation" ref="hibernateDao"></property>
 	</bean>
-	    <!--  add by zhou.yh --> 
-	<bean id="QueryMonitorActionBean" class="cn.com.agree.aweb.struts2.action.QueryMonitorAction" scope="prototype">
+	<bean id="GridOperActionBean" class="cn.com.agree.aweb.struts2.action.GridOperAction"
+		scope="prototype">
 		<property name="dbOperation" ref="hibernateDao"></property>
 	</bean>
-	
-	<bean id="EventActionBean" class="cn.com.agree.aweb.struts2.action.EventAction" scope="prototype">
+	<bean id="ClassifyConfigActionBean" class="cn.com.agree.aweb.struts2.action.ClassifyConfigAction"
+		scope="prototype">
 		<property name="dbOperation" ref="hibernateDao"></property>
 	</bean>
-	
-	<bean id="CamaComponentPagesActionBean" class="cn.com.agree.aweb.struts2.action.CamaComponentPagesAction" scope="prototype">
+	<bean id="BaseActionBean" class="cn.com.agree.aweb.struts2.action.BaseAction"
+		scope="prototype">
 		<property name="dbOperation" ref="hibernateDao"></property>
 	</bean>
-	
-	<bean id="CaigouActionBean" class="cn.com.agree.aweb.struts2.action.CaigouAction" scope="prototype">
+
+	<bean id="FineDegreeBean" class="cn.com.agree.aweb.struts2.action.FineDegreeAction"
+		scope="prototype">
 		<property name="dbOperation" ref="hibernateDao"></property>
 	</bean>
-	<bean id="GonghuoActionBean" class="cn.com.agree.aweb.struts2.action.GonghuoAction" scope="prototype">
+	<!-- add by zhou.yh -->
+	<bean id="QueryMonitorActionBean" class="cn.com.agree.aweb.struts2.action.QueryMonitorAction"
+		scope="prototype">
 		<property name="dbOperation" ref="hibernateDao"></property>
 	</bean>
-		<bean id="ShiyongActionBean" class="cn.com.agree.aweb.struts2.action.ShiyongAction" scope="prototype">
+
+	<bean id="EventActionBean" class="cn.com.agree.aweb.struts2.action.EventAction"
+		scope="prototype">
 		<property name="dbOperation" ref="hibernateDao"></property>
 	</bean>
-	
+
+	<bean id="CamaComponentPagesActionBean"
+		class="cn.com.agree.aweb.struts2.action.CamaComponentPagesAction"
+		scope="prototype">
+		<property name="dbOperation" ref="hibernateDao"></property>
+	</bean>
+
+	<bean id="CaigouActionBean" class="cn.com.agree.aweb.struts2.action.CaigouAction"
+		scope="prototype">
+		<property name="dbOperation" ref="hibernateDao"></property>
+	</bean>
+	<bean id="GonghuoActionBean" class="cn.com.agree.aweb.struts2.action.GonghuoAction"
+		scope="prototype">
+		<property name="dbOperation" ref="hibernateDao"></property>
+	</bean>
+	<bean id="ShiyongActionBean" class="cn.com.agree.aweb.struts2.action.ShiyongAction"
+		scope="prototype">
+		<property name="dbOperation" ref="hibernateDao"></property>
+	</bean>
+	<bean id="HuishouActionBean" class="cn.com.agree.aweb.struts2.action.HuishouAction"
+		scope="prototype">
+		<property name="dbOperation" ref="hibernateDao"></property>
+	</bean>
+
 </beans>

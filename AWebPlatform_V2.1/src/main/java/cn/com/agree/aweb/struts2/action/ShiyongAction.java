@@ -1,14 +1,10 @@
 package cn.com.agree.aweb.struts2.action;
 
-import java.io.Serializable;
-import java.util.List;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import cn.com.agree.aweb.exception.AWebException;
 import cn.com.agree.aweb.exception.DBSupportException;
-import cn.com.agree.aweb.exception.ExceptionTypes;
 import cn.com.agree.aweb.hibernate.dao.YuyueVO;
 import cn.com.agree.aweb.struts2.action.support.StandardActionSupport;
 import cn.com.agree.aweb.struts2.action.support.StrutsMessage;
@@ -31,12 +27,10 @@ public class ShiyongAction  extends StandardActionSupport {
 	private String sypid;
 	private String synumber;
 	private String sywpname;
-	private String sylx;//预约类型
 	private String sywpsl;
-	private String syjldw;//计量单位
-	private String syyy;//预约原因
-	private String syyn;//审核是否通过
-	private String syshyy;//审核原因
+	private String sydd;
+	private String syyn;
+	private String syyy;
 	
 	/**
 	 * 预约操作
@@ -54,13 +48,9 @@ public class ShiyongAction  extends StandardActionSupport {
 				yy.setYuyue_rid(sypid);
 				yy.setYuyue_pn(synumber);
 				yy.setYuyue_wpname(sywpname);
-				yy.setYuyue_leixing(sylx);
 				yy.setYuyue_sl(sywpsl);
-				yy.setYuyue_jldanwei(syjldw);//计量单位
-				yy.setYuyue_yy(syyy);
 				
-				//this.dbOperation.saveSingleData(yy);
-				this.dbOperation.saveOrUpdateSingleData(yy);
+				this.dbOperation.saveSingleData(yy);
 				strutsMessage = StrutsMessage.successMessage();
 				strutsMessage.addParameter("yy",yy);
 			} catch (DBSupportException e) {
@@ -169,6 +159,14 @@ public class ShiyongAction  extends StandardActionSupport {
 		this.sywpsl = sywpsl;
 	}
 
+	public String getSydd() {
+		return sydd;
+	}
+
+	public void setSydd(String sydd) {
+		this.sydd = sydd;
+	}
+
 	public String getSyyn() {
 		return syyn;
 	}
@@ -183,30 +181,6 @@ public class ShiyongAction  extends StandardActionSupport {
 
 	public void setSyyy(String syyy) {
 		this.syyy = syyy;
-	}
-
-	public String getSylx() {
-		return sylx;
-	}
-
-	public void setSylx(String sylx) {
-		this.sylx = sylx;
-	}
-
-	public String getSyjldw() {
-		return syjldw;
-	}
-
-	public void setSyjldw(String syjldw) {
-		this.syjldw = syjldw;
-	}
-
-	public String getSyshyy() {
-		return syshyy;
-	}
-
-	public void setSyshyy(String syshyy) {
-		this.syshyy = syshyy;
 	}
 
 	public StrutsMessage getStrutsMessage() {

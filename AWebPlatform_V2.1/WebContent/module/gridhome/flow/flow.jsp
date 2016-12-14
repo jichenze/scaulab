@@ -1,8 +1,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java"%>
 <%@ page session="false"%>
 <style>
-#despList tr>td:first-child, #colorList tr>td:first-child, #filterList tr>td:first-child,
-	#expandList tr>td:first-child, #otherList tr>td:first-child,#queryList tr>td:first-child{
+#despList tr>td:first-child,#colorList tr>td:first-child,#filterList tr>td:first-child,#expandList tr>td:first-child,#otherList tr>td:first-child,#queryList tr>td:first-child
+	{
 	padding-left: 50px !important;
 	width: 200px !important;
 }
@@ -12,8 +12,7 @@
 	width: 250px !important;
 }
 
-#colorList tr>td input, #expandList tr>td input, #filterList tr>td input
-	{
+#colorList tr>td input,#expandList tr>td input,#filterList tr>td input {
 	/* padding-left: 20px !important;  */
 	width: 180px !important;
 }
@@ -86,9 +85,11 @@
 							<option value="4">10分钟</option>
 					</select></td>
 					<td>时间区间开始：</td>
-					<td><input id ="startDate" name= "expiredtime" type ="datetime" readonly="" placeholder= "请选择开始时间" class ="span8 form_datetime"></td>
+					<td><input id="startDate" name="expiredtime" type="datetime"
+						readonly="" placeholder="请选择开始时间" class="span8 form_datetime"></td>
 					<td>时间区间结束：</td>
-					<td><input id ="endDate" name= "expiredtime" type ="datetime" readonly="" placeholder= "请选择结束时间" class ="span8 form_datetime"></td>
+					<td><input id="endDate" name="expiredtime" type="datetime"
+						readonly="" placeholder="请选择结束时间" class="span8 form_datetime"></td>
 				</tr>
 				<tr></tr>
 				<tr>
@@ -188,7 +189,7 @@
 			<%--字段中文名配置 End--%>
 			<%--返回码颜色配置 Start--%>
 			<div class="tab-pane" id="colorConfig">
-			    <div style="font-style: italic; font-size: .1em">
+				<div style="font-style: italic; font-size: .1em">
 					<span><span style="color: red">* 提示：</span>颜色为颜色值，如#eee，或者red</span>
 				</div>
 				<table class="table table-condensed">
@@ -252,29 +253,29 @@
 				</table>
 			</div>
 			<%--其他配置 End--%>
-			
+
 			<%--多维度查询配置 Start--%>
 			<div class="tab-pane" id="queryConfig">
-                <div style="font-style: italic; font-size: .1em">
+				<div style="font-style: italic; font-size: .1em">
 					<span><span style="color: red">* 提示：</span>按条件显示指定值，若在过滤内容中已填写则会被过滤掉不会显示</span>
 				</div>
 				<table class="table table-condensed">
 					<tbody id="queryList">
 						<tr>
 							<td>应用代码:</td>
-							<td><input type="text" id="queryMc"/></td>
+							<td><input type="text" id="queryMc" /></td>
 						</tr>
 						<tr>
 							<td>交易代码:</td>
-							<td><input type="text" id="queryTc"/></td>
+							<td><input type="text" id="queryTc" /></td>
 						</tr>
 						<tr>
 							<td>所属渠道:</td>
-							<td><input type="text" id="queryChannelCode"/></td>
+							<td><input type="text" id="queryChannelCode" /></td>
 						</tr>
 						<tr>
 							<td>交易处理状态:</td>
-							<td><input type="text" id="queryTradeStatus"/></td>
+							<td><input type="text" id="queryTradeStatus" /></td>
 						</tr>
 					</tbody>
 				</table>
