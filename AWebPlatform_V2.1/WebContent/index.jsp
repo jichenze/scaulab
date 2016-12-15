@@ -190,7 +190,7 @@
 					</div></li>
 				<li><div
 						style="height: 60px; width: auto; padding: 20px 0 20px 8px; color: #fff">
-						<span style="font-weight: bold; font-size: 1.3em">实验室管理系统</span><span
+						<span style="font-weight: bold; font-size: 1.3em">实验室物品安全使用管理信息系统</span><span
 							id="nowTime"
 							style="line-height: 3.2em; display: block; opacity: 0.8;"></span>
 					</div></li>

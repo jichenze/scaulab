@@ -50,6 +50,12 @@
 				class="span8"> <span class="help-inline hide">请在这里数据数据</span>
 		</div>
 		<div class="control-group">
+		<label class="control-label" for="cgjldw">单位：</label>
+		<div class="controls">
+			<input id="cgjldw" name="cgjldw" type="text" placeholder="单位"
+				class="span8"> <span class="help-inline hide">请在这里数据数据</span>
+		</div>
+		<div class="control-group">
 			<label class="control-label" for="formControlTextarea">申购原因：</label>
 			<div class="controls">
 				<textarea id="cgyy" name="cgyy" placeholder="请输入原因" class="span8"

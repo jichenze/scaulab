@@ -30,14 +30,14 @@ public class YuyueVO {
 	@Column(name="yuyue_wupinName")
 	private String yuyue_wpname;
 	
-	@Column(name="yuyue_leixing")
-	private String yuyue_leixing;
-	
 	@Column(name="yuyue_shuliang")
 	private String yuyue_sl;
 	
 	@Column(name="yuyue_jldanwei")
-	private String yuyue_jldanwei;
+	private String yuyue_jldw;
+	
+	@Column(name="yuyue_didian")
+	private String yuyue_dd;
 	
 	@Column(name="yuyue_yuanyin")
 	private String yuyue_yy;
@@ -99,6 +99,30 @@ public class YuyueVO {
 	public void setYuyue_sl(String yuyue_sl) {
 		this.yuyue_sl = yuyue_sl;
 	}
+	
+	public String getYuyue_jldw() {
+		return yuyue_jldw;
+	}
+
+	public void setYuyue_jldw(String yuyue_jldw) {
+		this.yuyue_jldw = yuyue_jldw;
+	}
+
+	public String getYuyue_dd() {
+		return yuyue_dd;
+	}
+
+	public void setYuyue_dd(String yuyue_dd) {
+		this.yuyue_dd = yuyue_dd;
+	}
+
+	public String getYuyue_yy() {
+		return yuyue_yy;
+	}
+
+	public void setYuyue_yy(String yuyue_yy) {
+		this.yuyue_yy = yuyue_yy;
+	}
 
 	public String getYuyue_yn() {
 		return yuyue_yn;
@@ -114,29 +138,5 @@ public class YuyueVO {
 
 	public void setYuyueshenhe_yy(String yuyueshenhe_yy) {
 		this.yuyueshenhe_yy = yuyueshenhe_yy;
-	}
-
-	public String getYuyue_leixing() {
-		return yuyue_leixing;
-	}
-
-	public void setYuyue_leixing(String yuyue_leixing) {
-		this.yuyue_leixing = yuyue_leixing;
-	}
-
-	public String getYuyue_jldanwei() {
-		return yuyue_jldanwei;
-	}
-
-	public void setYuyue_jldanwei(String yuyue_jldanwei) {
-		this.yuyue_jldanwei = yuyue_jldanwei;
-	}
-
-	public String getYuyue_yy() {
-		return yuyue_yy;
-	}
-
-	public void setYuyue_yy(String yuyue_yy) {
-		this.yuyue_yy = yuyue_yy;
 	}
 }

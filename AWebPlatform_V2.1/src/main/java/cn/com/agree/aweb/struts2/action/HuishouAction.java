@@ -71,6 +71,7 @@ public class HuishouAction extends StandardActionSupport {
 				
 				//this.dbOperation.saveSingleData(cg);
 				this.dbOperation.saveOrUpdateSingleData(hs);
+				System.out.println(hsiOo);
 				if(hsiOo.equals("yes"))
 						updateCunchu();
 				
@@ -89,13 +90,16 @@ public class HuishouAction extends StandardActionSupport {
 	 */
 	public void updateCunchu(){
 		try {
+			System.out.println( hswpname);
 			CunchuVO cc = (CunchuVO) this.dbOperation.queryDataById(CunchuVO.class, hswpname);
 			if(cc!=null){		//物品存在，则增加其数量，修改其更新时间
+				System.out.println("开始更新存储");
 				int a= Integer.parseInt(cc.getCunchu_liang());
 				int b= Integer.parseInt(hsliang);
 				int count= a+b;
 				String s= ""+count;//此处可能有bug
 				cc.setCunchu_liang(s);
+				System.out.println("存储结束");
 				cc.setCunchu_updatetime(CommonUtils.getNowTime());
 				
 				this.dbOperation.saveOrUpdateSingleData(cc);
@@ -103,15 +107,19 @@ public class HuishouAction extends StandardActionSupport {
 				strutsMessage.addParameter("cc",cc);
 				
 			}else{		//
+				System.out.println("物品不存在！1");
 				strutsMessage = StrutsMessage.errorMessage("物品不存在！");				
 			}
 			
 		} catch (DBSupportException e) {
+			System.out.println("物品不存在！2");
 			strutsMessage = StrutsMessage.errorMessage(e.getMessage());
 		}
 		if(strutsMessage.isStatus() ==false){
+			System.out.println("物品不存在！3");
 			log.error("更新存储信息", strutsMessage.getErrorMsg());
 		}else{
+			System.out.println("物品不存在！4");
 			log.info("更新存储信息",  hswpname);
 		}
 	}

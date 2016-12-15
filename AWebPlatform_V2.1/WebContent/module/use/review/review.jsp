@@ -40,9 +40,9 @@
 				<th>学号</th>
 				<th>联系方式</th>
 				<th>物品</th>
-				<th>类型</th>
 				<th>申请数量</th>
 				<th>单位</th>
+				<th>地点</th>
 				<th>原因</th>
 				<th>审核</th>
 			</tr>
@@ -81,13 +81,6 @@
 		</div>
 	</div>
 	<div class="control-group">
-		<label class="control-label" for="sylx">类型：</label>
-		<div class="controls">
-			<input id="sylx" name="sylx" type="text" placeholder="申购物品名称"
-				class="span8" disabled> <span class="help-inline hide"></span>
-		</div>
-	</div>
-	<div class="control-group">
 		<label class="control-label" for="sywpsl">申请数量：</label>
 		<div class="controls">
 			<input id="sywpsl" name="sywpsl" type="text" placeholder="申请数量"
@@ -104,7 +97,14 @@
 	<div class="control-group">
 		<label class="control-label" for="syyy">申请原因：</label>
 		<div class="controls">
-			<input id="syyy" name="syyy" type="text" placeholder="申购原因"
+			<input id="syyy" name="syyy" type="text" placeholder="申请原因"
+				class="span8" disabled>
+		</div>
+	</div>
+	<div class="control-group">
+		<label class="control-label" for="sydd">地点：</label>
+		<div class="controls">
+			<input id="sydd" name="sydd" type="text" placeholder="地点"
 				class="span8" disabled>
 		</div>
 	</div>

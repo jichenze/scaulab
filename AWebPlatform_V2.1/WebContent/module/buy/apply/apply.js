@@ -24,6 +24,7 @@ define([ "jquery" ], function() {
 				                    			cgnumber:$("#cgnumber").val(),
 				                    			cgwpname:$("#cgwpname").val(),
 				                    			cgwpsl:$("#cgwpsl").val(),	
+				                    			cgjldw:$("#cgjldw").val(),
 				                    			cgyy:$("#cgyy").val()
 				                    		},
 				                    		shelter: '正在提交申购单，请稍侯…',

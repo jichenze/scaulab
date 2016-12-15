@@ -1,5 +1,5 @@
 define([ "jquery" ], function() {
-    var supplyTb,
+    var supplyTb,userType,
         supplyData = {};
     
     function initReplyTb($el) {
@@ -32,14 +32,18 @@ define([ "jquery" ], function() {
                      if(data.status&&data.content){
                          for(items=data.content.ghData,i=items.length;(item=(items[--i]));) {
                              dealData.push([
-                                 '<input type="checkbox" id="' + item.gonghuo_fname + '"/>',
                                  item.gonghuo_fname,
                                  item.gonghuo_id,
                                  item.gonghuo_time,
                                  item.gonghuo_phone,
                                  item.gonghuo_sname,
-                                 item.gonghuo_name,
+                                 item.gonghuo_wpname,
+                                 item.gonghuo_wplx=="1"?"有毒":"普通",
                                  item.gonghuo_sl,
+                                 item.gonghuo_jldw,
+                                 item.gonghuo_ccdw,
+                                 item.gonghuo_ccdd
+,
                              ]);
                              supplyData[item.gonghuo_fname] = item;
                          }
@@ -59,6 +63,26 @@ define([ "jquery" ], function() {
     return {
         // 模块加载结束后，会触发该方法
         load : function($el, scope, handler) {
+        	$.ajax({
+        		"type": "post",
+        		"contentType": "application/x-www-form-urlencoded;charset=utf-8",
+        		"url": "UserManagerAction_loadNowUser.do",
+        		"dataType": "json",
+        		"data": {},
+        		shelter:'正在加载当前用户数据，请稍侯…',
+        		success: function (data) {
+        			if (data.status) {
+        				userType = data.content.userVO.usertype;	
+        				if(userType=="1"){
+        					$(".gutter-bottom").hide()
+        				}
+        			} else {
+        				alert(data.errorMsg);
+        			}
+        		}, error: function (xhr, status, errMsg) {
+        			alert(errMsg);
+        		}
+        	});
 
 
             /*数据加载*/
@@ -82,8 +106,12 @@ define([ "jquery" ], function() {
                                      	ghtime:$("#ghtime").val(),
                                      	ghpn:$("#ghpn").val(),
                                      	ghsrname:$("#ghsrname").val(),
-                                     	ghname:$("#ghname").val(),
+                                     	ghwpname:$("#ghwpname").val(),
                                      	ghsl:$("#ghsl").val(),
+                                     	ghjldw:$("#ghjldw").val(),
+                                     	ghlx:$("#ghlx").val()=="有毒"?1:2,
+                                     	ghccdw:$("#ghccdw").val(),
+                                     	ghccdd:$("#ghccdd").val(),
                                      },
                                      shelter:'正在添加，请稍侯…',
                                      success: function (data) {
@@ -91,14 +119,17 @@ define([ "jquery" ], function() {
                                             var vo = data.content.gh;
 
                                              supplyTb.fnAddData([
-                                                 '<input type="checkbox" id="' + vo.gonghuo_fname + '"/>',
-                                                 vo.gonghuo_fname,
-                                                 vo.gonghuo_id,
-                                                 vo.gonghuo_time,
-                                                 vo.gonghuo_phone,
-                                                 vo.gonghuo_sname,
-                                                 vo.gonghuo_name,
-                                                 vo.gonghuo_sl,
+                                                                 vo.gonghuo_fname,
+                                                                 vo.gonghuo_id,
+                                                                 vo.gonghuo_time,
+                                                                 vo.gonghuo_phone,
+                                                                 vo.gonghuo_sname,
+                                                                 vo.gonghuo_wpname,
+                                                                 vo.gonghuo_wplx,
+                                                                 vo.gonghuo_sl,
+                                                                 vo.gonghuo_jldw,
+                                                                 vo.gonghuo_ccdw,
+                                                                 vo.gonghuo_ccdd
                                              ]);
 
                                              supplyData[vo.gonghuo_fname] = vo;

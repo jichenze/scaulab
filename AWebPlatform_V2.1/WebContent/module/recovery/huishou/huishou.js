@@ -1,5 +1,5 @@
 define([ "jquery" ], function() {
-    var huishouTb,
+    var huishouTb,userType,
         huishouData = {};
     
     function inituseTb($el) {
@@ -34,7 +34,7 @@ define([ "jquery" ], function() {
                              dealData.push([
                         
 									item.huishou_id,
-									item.huishou_shouName,
+									item.huishou_wpName,
 									item.huishou_liang,
 									item.huishou_jldanwei,
 									item.huishou_songName,
@@ -42,7 +42,7 @@ define([ "jquery" ], function() {
 									item.huishou_danwei,
 									item.huishou_inORout=="yes"?"是":"否"
                              ]);
-                             huishouData[item.caigou_name] = item;
+                             huishouData[item.huishou_wpName] = item;
                          }
                      }else {
                          app.alert('申请单信息', data.errorMsg || '加载采购申请单信息错误', app.alertShowType.ERROR, app.alertMsgType.MESSAGE);
@@ -60,7 +60,26 @@ define([ "jquery" ], function() {
     return {
         // 模块加载结束后，会触发该方法
         load : function($el, scope, handler) {
-
+        	$.ajax({
+        		"type": "post",
+        		"contentType": "application/x-www-form-urlencoded;charset=utf-8",
+        		"url": "UserManagerAction_loadNowUser.do",
+        		"dataType": "json",
+        		"data": {},
+        		shelter:'正在加载当前用户数据，请稍侯…',
+        		success: function (data) {
+        			if (data.status) {
+        				userType = data.content.userVO.usertype;	
+        				if(userType=="1"){
+        					$(".gutter-bottom").hide()
+        				}
+        			} else {
+        				alert(data.errorMsg);
+        			}
+        		}, error: function (xhr, status, errMsg) {
+        			alert(errMsg);
+        		}
+        	});
 
             /*数据加载*/
             //初始化用户表格
@@ -95,7 +114,7 @@ define([ "jquery" ], function() {
                                      huishouTb.fnAddData([
                         
                                          vo.huishou_id,
-                                         vo.huishou_shouName,
+                                         vo.huishou_wpName,
                                          vo.huishou_liang,
                                          vo.huishou_jldanwei,
                                          vo.huishou_songName,
@@ -104,7 +123,7 @@ define([ "jquery" ], function() {
                                          vo.huishou_inORout=="yes"?"是":"否"
                                      ]);
 
-                                     huishouData[vo.hswpname] = vo;
+                                     huishouData[vo.huishou_wpName] = vo;
 
                                      app.alert('创建信息成功！',app.alertShowType.SUCCESS);
                                      context.hide();
@@ -140,7 +159,7 @@ define([ "jquery" ], function() {
                                  huishouTb.fnAddData([
                     
 										vo.huishou_id,
-										vo.huishou_shouName,
+										vo.huishou_wpName,
 										vo.huishou_liang,
 										vo.huishou_jldanwei,
 										vo.huishou_songName,
@@ -149,7 +168,7 @@ define([ "jquery" ], function() {
 										vo.huishou_inORout=="yes"?"是":"否"
                                  ]);
 
-                                 huishouData[vo.hswpname] = vo;
+                                 huishouData[vo.huishou_wpName] = vo;
 
                                  app.alert('创建信息成功！',app.alertShowType.SUCCESS);
                                  context.hide();

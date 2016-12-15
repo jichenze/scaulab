@@ -3,6 +3,7 @@ package cn.com.agree.aweb.struts2.action;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import cn.com.agree.aweb.Constants;
 import cn.com.agree.aweb.exception.AWebException;
 import cn.com.agree.aweb.exception.DBSupportException;
 import cn.com.agree.aweb.hibernate.dao.CaigouVO;
@@ -21,18 +22,21 @@ public class CaigouAction extends StandardActionSupport {
 	private static final Logger log = LoggerFactory.getLogger(CaigouAction.class);
 	
 	private String cgid;
-	private String cgname;
-	private String cgpid;
-	private String cgnumber;
-	private String cgwpname;
-	private String cgwpsl;
-	private String cgyy;
+	private String cgname;//申请人
+	private String cgpid;//学号或工号
+	private String cgnumber;//联系方式
+	private String cgwpname;//物品名称
+	private String cgwpsl;//数量
+	private String cgjldw;//计量单位
+	private String cgyy;//采购原因
 	private String cgyn;
-	private String cgpl;
+	private String cgpl;//批量
 	private String cgdate;
-	private String cgshyy;
+	private String cgshyy;//审核不通过原因
 	
 	private StrutsMessage strutsMessage;
+	
+
 	
 	/**
 	 * 申请录入操作
@@ -51,6 +55,7 @@ public class CaigouAction extends StandardActionSupport {
 				cg.setCaigou_pn(cgnumber);
 				cg.setCaigou_hxn(cgwpname);
 				cg.setCaigou_sl(cgwpsl);
+				cg.setCaigou_jldw(cgjldw);
 				cg.setCaigou_yy(cgyy);
 				
 				//this.dbOperation.saveSingleData(cg);
@@ -184,6 +189,16 @@ public class CaigouAction extends StandardActionSupport {
 
 	public void setCgwpsl(String cgwpsl) {
 		this.cgwpsl = cgwpsl;
+	}
+	
+
+	public String getCgjldw() {
+		return cgjldw;
+	}
+
+
+	public void setCgjldw(String cgjldw) {
+		this.cgjldw = cgjldw;
 	}
 
 

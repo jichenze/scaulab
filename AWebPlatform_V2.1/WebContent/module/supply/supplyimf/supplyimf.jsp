@@ -14,18 +14,21 @@
 	<table id="supplyTb" class="display dataTable table"
 		style="width: 100%;">
 		<colgroup>
-			<col width="3%" />
 			<col width="10%" />
-			<col width="20%" />
-			<col width="17%" />
 			<col width="10%" />
-			<col width="15%" />
-			<col width="14%" />
-			<col width="11%" />
+			<col width="10%" />
+			<col width="10%" />
+			<col width="10%" />
+			<col width="10%" />
+			<col width="10%" />
+			<col width="10%" />
+			<col width="10%" />
+			<col width="5%" />
+			<col width="5%" />
+
 		</colgroup>
 		<thead>
 			<tr>
-				<th><input id="replySelAllBtn" type="checkbox" /></th>
 				<th>供货商</th>
 				<th>供货商编号</th>
 				<th>供货时间</th>
@@ -34,6 +37,7 @@
 				<th>产品名称</th>
 				<th>类型</th>
 				<th>数量</th>
+				<th>单位</th>
 				<th>所属单位</th>
 				<th>存储地点</th>
 			</tr>
@@ -80,9 +84,16 @@
 		</div>
 	</div>
 	<div class="control-group">
-		<label class="control-label" for="ghname">产品名称：</label>
+		<label class="control-label" for="ghwpname">产品名称：</label>
 		<div class="controls">
-			<input id="ghname" name="ghname" type="text" placeholder="产品名称"
+			<input id="ghwpname" name="ghwpname" type="text" placeholder="产品名称"
+				class="span8">
+		</div>
+	</div>
+	<div class="control-group">
+		<label class="control-label" for="ghlx">类型：</label>
+		<div class="controls">
+			<input id="ghlx" name="ghlx" type="text" placeholder="类型"
 				class="span8">
 		</div>
 	</div>
@@ -93,7 +104,27 @@
 				class="span8">
 		</div>
 	</div>
-
+	<div class="control-group">
+		<label class="control-label" for="ghjldw">单位：</label>
+		<div class="controls">
+			<input id="ghjldw" name="ghjldw" type="text" placeholder="单位"
+				class="span8">
+		</div>
+	</div>
+	<div class="control-group">
+		<label class="control-label" for="ghccdw">所属单位：</label>
+		<div class="controls">
+			<input id="ghccdw" name="ghccdw" type="text" placeholder="所属单位"
+				class="span8">
+		</div>
+	</div>
+	<div class="control-group">
+		<label class="control-label" for="ghccdd">存储地点：</label>
+		<div class="controls">
+			<input id="ghccdd" name="ghccdd" type="text" placeholder="存储地点"
+				class="span8">
+		</div>
+	</div>
 	<div class="form-actions">
 		<button id="supplyBtn" type="button" class="btn btn-inverse">创建</button>
 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

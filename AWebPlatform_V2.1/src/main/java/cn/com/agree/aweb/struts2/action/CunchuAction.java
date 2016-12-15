@@ -21,6 +21,7 @@ public class CunchuAction  extends StandardActionSupport {
 	private String cclx;//物品类型
 	private String ccName;//物品名称
 	private String ccliang;//物品数量
+	private String ccjldw;//计量单位
 	private String ccdw;//物品单位
 	private String ccdd;//物品存储地点
 	private String ccudtime;//物品最后更新时间
@@ -29,7 +30,8 @@ public class CunchuAction  extends StandardActionSupport {
 	
 	/**
 	 * @Description: 获取所有存储信息
-	 * 首先在双击时传递一个 物品类型参数， 从而获得输出 是哪种类型的物品（一般是“1”，有毒是“2”）
+	 * 首先在双击时传递一个 物品类型参数， 从而获得输出 是哪种类型的物品
+	 * （一般是“2”，有毒是“1”,低值品"3",设备类“4”）
 	 */
 	public String loadAllCunchu(){
 		try {
@@ -65,6 +67,14 @@ public class CunchuAction  extends StandardActionSupport {
 
 	public void setCcliang(String ccliang) {
 		this.ccliang = ccliang;
+	}
+
+	public String getCcjldw() {
+		return ccjldw;
+	}
+
+	public void setCcjldw(String ccjldw) {
+		this.ccjldw = ccjldw;
 	}
 
 	public String getCcdw() {

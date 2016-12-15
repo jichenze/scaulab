@@ -119,7 +119,9 @@ $(function () {
 						"show" : true,
 						'keyboard' : false
 					});
+					app.domain.exports("juese",{type:user.usertype})
 				}else{
+					
 				}
 			} else {
 				alert(data.errorMsg);

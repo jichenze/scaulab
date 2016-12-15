@@ -44,13 +44,6 @@
 		</div>
 	</div>
 	<div class="control-group">
-		<label class="control-label" for="sylx">类型：</label>
-		<div class="controls">
-			<input id="sylx" name="sylx" type="text" placeholder="请输入类型"
-				class="span8"> <span class="help-inline hide">请在这里数据数据</span>
-		</div>
-	</div>
-	<div class="control-group">
 		<label class="control-label" for="sywpsl">申请数量：</label>
 		<div class="controls">
 			<input id="sywpsl" name="sywpsl" type="text" placeholder="请输入数量"
@@ -65,9 +58,16 @@
 		</div>
 	</div>
 	<div class="control-group">
+		<label class="control-label" for="sydd">地点：</label>
+		<div class="controls">
+			<input id="sydd" name="sydd" type="text" placeholder="请输入地点"
+				class="span8"> <span class="help-inline hide">请在这里数据数据</span>
+		</div>
+	</div>
+	<div class="control-group">
 		<label class="control-label" for="syyy">原因：</label>
 		<div class="controls">
-			<input id="syyy" name="syyy" type="text" placeholder="请输入原因"
+			<input id="syyy" name="syyy" type="text" placeholder="请输入地点"
 				class="span8"> <span class="help-inline hide">请在这里数据数据</span>
 		</div>
 	</div>

@@ -32,6 +32,9 @@ public class CaigouVO {
 	
 	@Column(name="caigou_shuliang")
 	private String caigou_sl;
+
+	@Column(name="caigou_jldanwei")
+	private String caigou_jldw;
 	
 	@Column(name="caigou_yuanyin")
 	private String caigou_yy;
@@ -98,6 +101,14 @@ public class CaigouVO {
 
 	public void setCaigou_sl(String caigou_sl) {
 		this.caigou_sl = caigou_sl;
+	}
+	
+	public String getCaigou_jldw() {
+		return caigou_jldw;
+	}
+
+	public void setCaigou_jldw(String caigou_jldw) {
+		this.caigou_jldw = caigou_jldw;
 	}
 
 	public String getCaigou_yy() {

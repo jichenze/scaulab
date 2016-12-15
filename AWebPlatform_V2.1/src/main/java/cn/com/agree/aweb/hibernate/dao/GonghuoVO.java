@@ -34,6 +34,9 @@ public class GonghuoVO {
 	@Column(name="gonghuo_shuliang")
 	private String gonghuo_sl;
 	
+	@Column(name="gonghuo_jldanwei")
+	private String gonghuo_jldw;
+	
 	@Column(name="gonghuo_wpName")
 	private String gonghuo_wpname;
 	
@@ -96,6 +99,14 @@ public class GonghuoVO {
 
 	public void setGonghuo_sl(String gonghuo_sl) {
 		this.gonghuo_sl = gonghuo_sl;
+	}
+	
+	public String getGonghuo_jldw() {
+		return gonghuo_jldw;
+	}
+
+	public void setGonghuo_jldw(String gonghuo_jldw) {
+		this.gonghuo_jldw = gonghuo_jldw;
 	}
 
 	public String getGonghuo_wpname() {

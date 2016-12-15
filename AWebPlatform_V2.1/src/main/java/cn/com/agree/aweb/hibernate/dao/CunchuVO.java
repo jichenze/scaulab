@@ -33,6 +33,9 @@ public class CunchuVO {
 	@Column(name="cunchu_liang")
 	private String cunchu_liang;
 	
+	@Column(name="cunchu_jldanwei")
+	private String cunchu_jldw;
+	
 	public CunchuVO(){
 		super();
 	}
@@ -83,5 +86,13 @@ public class CunchuVO {
 
 	public void setCunchu_liang(String cunchu_liang) {
 		this.cunchu_liang = cunchu_liang;
+	}
+
+	public String getCunchu_jldw() {
+		return cunchu_jldw;
+	}
+
+	public void setCunchu_jldw(String cunchu_jldw) {
+		this.cunchu_jldw = cunchu_jldw;
 	}
 }

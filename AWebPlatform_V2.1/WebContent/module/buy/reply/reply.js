@@ -1,108 +1,5 @@
-//define([ "jquery" ], function() {
-//     return {
-//
-//	        load : function($el, scope, handler) {
-//	        	console.log("页面加载时，进入了load方法");
-//	        	//进入页面加载采购申请列表
-////	        	$.ajax({
-////            		"type": "post",
-////            		"contentType": "application/x-www-form-urlencoded;charset=utf-8",
-////            		"url":'',
-////            		"dataType": "json",
-////            		"data":{
-////            			
-////            		},
-////            		success:function(data2){
-////            			for(var i=0;i<data2.length;i++){
-////            				$(".replybody").append("<tr>"+
-////            					  "<td>"+data2[i].xx+"</td>"+
-////                      		      "<td>"+data2[i].xxx+"</td>"+
-////                      		      "<td>"+data2[i].xxx+"</td>"+
-////                      			  "<td><button type='button' class='btn btn-success btn-small pull-right reply'>审核</button>"+
-////                      		      "</td>"+
-////                      		    "</tr>")
-////            			}
-////            	
-////            		},
-////    				error: function (xhr, status, errMsg) {
-////    					alert('采购申请列表加载错误' + status, errMsg, 'msg');
-////    				}
-////            	});				                    		
-//	        	
-//
-//	        	
-//	        	
-//			//处理审核框中的审核结果
-//				$('.reply',$el).click(function(){
-//					 $('#replyshow').modal('show');
-//					 console.log($(this).parent("tr").find("td").eq(0).text());
-//					 $.ajax({
-//		            		"type": "post",
-//		            		"contentType": "application/x-www-form-urlencoded;charset=utf-8",
-//		            		"url":'',
-//		            		"dataType": "json",
-//		            		"data":{
-////		            			xxx:$('.reply').siblings(".applyid")
-//		            		},
-//		            		success:function(data2){
-//		            			for(var i=0;i<data2.length;i++){
-//		            				$(".replybody").append("<tr>"+
-//		            					  "<td>"+data2[i].xx+"</td>"+
-//		                      		      "<td>"+data2[i].xxx+"</td>"+
-//		                      		      "<td>"+data2[i].xxx+"</td>"+
-//		                      			  "<td><button type='button' class='btn btn-success btn-small pull-right reply'>审核</button>"+
-//		                      		      "</td>"+
-//		                      		    "</tr>")
-//		            			}
-//		            	
-//		            		},
-//		    				error: function (xhr, status, errMsg) {
-//		    					alert('错误' + status, errMsg, 'msg');
-//		    				}
-//		            	});				                    
-//				})
-//				$('.shownopass',$el).hide();
-//				$('.showpass_small',$el).hide();
-//				$('#pass',$el).click(function(){
-//					$('.shownopass',$el).hide();
-//					$('.showpass',$el).show();
-//				});
-//				$('#nopass',$el).click(function(){
-//					$('.shownopass',$el).show();
-//					$('.showpass',$el).hide();
-//				})
-//				$('#big',$el).click(function(){
-//					$('.showpass_small',$el).hide();
-//					$('.showpass_big',$el).show();
-//				});
-//				$('#small',$el).click(function(){
-//					$('.showpass_small',$el).show();
-//					$('.showpass_big',$el).hide();
-//				});
-//				$('#datetimePickerExample',$el).datetimepicker({
-//				    format: 'yyyy-mm-dd'
-//				});
-//				$('#datetimePickerExample2',$el).datetimepicker({
-//				    format: 'yyyy-mm-dd'
-//				});
-//	        },
-//	
-//			unload : function(handler) {
-//				console.log("页面关闭时，进入了unload方法");
-//			},
-//			
-//			pause : function($el, scope, handler) {
-//				console.log("页面未关闭，但是打开了另一个页面，进入了pause方法");
-//			},
-//			
-//			resume : function($el, scope, handler) {
-//				console.log("重新进入页面，进入了resume方法");
-//			}
-//	};
-//});
-
 define([ "jquery" ], function() {
-    var userSelectComponent,
+    var userSelectComponent,userType,
         userData = {};
     
     function initReplyTb($el) {
@@ -164,9 +61,29 @@ define([ "jquery" ], function() {
         // 模块加载结束后，会触发该方法
         load : function($el, scope, handler) {
 
-        	
-        	
-        	
+
+        	$.ajax({
+        		"type": "post",
+        		"contentType": "application/x-www-form-urlencoded;charset=utf-8",
+        		"url": "UserManagerAction_loadNowUser.do",
+        		"dataType": "json",
+        		"data": {},
+        		shelter:'正在加载当前用户数据，请稍侯…',
+        		success: function (data) {
+        			if (data.status) {
+        				userType = data.content.userVO.usertype;	
+        				if(userType=="1"){
+        					$(".gutter-bottom").hide()
+        				}
+        			} else {
+        				alert(data.errorMsg);
+        			}
+        		}, error: function (xhr, status, errMsg) {
+        			alert(errMsg);
+        		}
+        	});
+
+
             /*变量定义*/
             var TEMP = "<p class='term'>_content_</p>",
                 isUserValidate = false,

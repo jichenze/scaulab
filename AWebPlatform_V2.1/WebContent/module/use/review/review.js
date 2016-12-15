@@ -1,5 +1,5 @@
 define([ "jquery" ], function() {
-    var reviewSelectComponent,
+    var reviewSelectComponent,userType
         reviewData = {};
     
     function initreviewTb($el) {
@@ -38,9 +38,9 @@ define([ "jquery" ], function() {
                                  item.yuyue_rid,
                                  item.yuyue_pn,
                                  item.yuyue_wpname,
-                                 item.yuyue_leixing,
                                  item.yuyue_sl,
-                                 item.yuyue_jldanwei,
+                                 item.yuyue_jldw,
+                                 item.yuyue_dd,
                                  item.yuyue_yy,
                                  item.yuyue_yn=="yes"?"通过":item.yuyue_yn=="no"?"不通过":""
                              ]);
@@ -62,7 +62,26 @@ define([ "jquery" ], function() {
     return {
         // 模块加载结束后，会触发该方法
         load : function($el, scope, handler) {
-
+        	$.ajax({
+        		"type": "post",
+        		"contentType": "application/x-www-form-urlencoded;charset=utf-8",
+        		"url": "UserManagerAction_loadNowUser.do",
+        		"dataType": "json",
+        		"data": {},
+        		shelter:'正在加载当前用户数据，请稍侯…',
+        		success: function (data) {
+        			if (data.status) {
+        				userType = data.content.userVO.usertype;	
+        				if(userType=="1"){
+        					$(".gutter-bottom").hide()
+        				}
+        			} else {
+        				alert(data.errorMsg);
+        			}
+        		}, error: function (xhr, status, errMsg) {
+        			alert(errMsg);
+        		}
+        	});
 
             /*数据加载*/
             //初始化用户表格
@@ -88,20 +107,19 @@ define([ "jquery" ], function() {
 	                var sypid = app.domain.get("user", "sypid");
 	                var synumber = app.domain.get("user", "synumber");
 	                var sywpname = app.domain.get("user", "sywpname");
-	                var sylx = app.domain.get("user", "sylx");
 	                var sywpsl = app.domain.get("user", "sywpsl");
 	                var syjldw = app.domain.get("user", "syjldw");
+	                var sydd=app.domain.get("user", "sydd");
 	                var syyy = app.domain.get("user", "syyy");
 	                //初始赋值
 	                $("#syname", $ele).val(syname);
 	                $("#sypid", $ele).val(sypid);
 	                $("#synumber", $ele).val(synumber);
 	                $("#sywpname", $ele).val(sywpname);
-	                $("#sylx", $ele).val(sylx);
 	                $("#syjldw", $ele).val(syjldw);
 	                $("#sywpsl", $ele).val(sywpsl);
 	                $("#syyy", $ele).val(syyy);
-
+	                $("#sydd", $ele).val(sydd);
 	                //提交
 	                $('#reviewBtn', $ele).click(function () {                   
 	                        $.ajax({
@@ -152,11 +170,10 @@ define([ "jquery" ], function() {
                     	sypid: $parent.siblings(':eq(2)').text(),
                     	synumber: $parent.siblings(':eq(3)').text(),
                     	sywpname: $parent.siblings(':eq(4)').text(),
-                    	sylx: $parent.siblings(':eq(5)').text(),
-                    	sywpsl:$parent.siblings(':eq(6)').text(),
-                    	syjldw: $parent.siblings(':eq(7)').text(),
+                    	sywpsl:$parent.siblings(':eq(5)').text(),
+                    	syjldw: $parent.siblings(':eq(6)').text(),
+                    	sydd: $parent.siblings(':eq(7)').text(),
                     	syyy: $parent.siblings(':eq(8)').text(),
-
                     	
                     	
 //                    	node:$parent[0],

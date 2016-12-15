@@ -79,5 +79,12 @@
 		scope="prototype">
 		<property name="dbOperation" ref="hibernateDao"></property>
 	</bean>
-
+	<bean id="CunchuActionBean" class="cn.com.agree.aweb.struts2.action.CunchuAction"
+		scope="prototype">
+		<property name="dbOperation" ref="hibernateDao"></property>
+	</bean>
+	<bean id="LingyongActionBean" class="cn.com.agree.aweb.struts2.action.LingyongAction"
+		scope="prototype">
+		<property name="dbOperation" ref="hibernateDao"></property>
+	</bean>
 </beans>

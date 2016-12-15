@@ -23,42 +23,17 @@ public class ShiyongAction  extends StandardActionSupport {
 	private StrutsMessage strutsMessage;
 	
 	private String syid;
-	private String syname;
-	private String sypid;
-	private String synumber;
-	private String sywpname;
-	private String sywpsl;
-	private String sydd;
-	private String syyn;
-	private String syyy;
+	private String syname;//使用人姓名
+	private String sypid;//学号或工号
+	private String synumber;//联系方式
+	private String sywpname;//物品名称
+	private String sywpsl;//数量
+	private String syjldw;//计量单位
+	private String sydd;//使用地点
+	private String syyn;//是否通过
+	private String syyy;//使用原因
+	private String syshyy;//使用审核原因
 	
-	/**
-	 * 预约操作
-	 * @return
-	 * @throws Throwable 
-	 */
-	public String shenQing() {
-		try {
-				YuyueVO yy= new YuyueVO();
-				
-				//设置属性名和 表中的 name属性 值 相同，录入数据
-				this.setSyid(CommonUtils.getNowTime());
-				yy.setYuyue_id(syid);
-				yy.setYuyue_name(syname);
-				yy.setYuyue_rid(sypid);
-				yy.setYuyue_pn(synumber);
-				yy.setYuyue_wpname(sywpname);
-				yy.setYuyue_sl(sywpsl);
-				
-				this.dbOperation.saveSingleData(yy);
-				strutsMessage = StrutsMessage.successMessage();
-				strutsMessage.addParameter("yy",yy);
-			} catch (DBSupportException e) {
-				strutsMessage = StrutsMessage.errorMessage(e.getMessage());
-			}
-		
-		return SUCCESS;
-	}
 	
 	/**
 	 * 预约列表
@@ -77,6 +52,39 @@ public class ShiyongAction  extends StandardActionSupport {
 		return SUCCESS;
 	}
 	
+	
+	/**
+	 * 预约操作
+	 * @return
+	 * @throws Throwable 
+	 */
+	public String shenQing() {
+		try {
+				YuyueVO yy= new YuyueVO();
+				
+				//设置属性名和 表中的 name属性 值 相同，录入数据
+				this.setSyid(CommonUtils.getNowTime());
+				yy.setYuyue_id(syid);
+				yy.setYuyue_name(syname);
+				yy.setYuyue_rid(sypid);
+				yy.setYuyue_pn(synumber);
+				yy.setYuyue_wpname(sywpname);
+				yy.setYuyue_sl(sywpsl);
+				yy.setYuyue_jldw(syjldw);
+				yy.setYuyue_dd(sydd);
+			    yy.setYuyue_yy(syyy);
+				
+				this.dbOperation.saveSingleData(yy);
+				strutsMessage = StrutsMessage.successMessage();
+				strutsMessage.addParameter("yy",yy);
+			} catch (DBSupportException e) {
+				strutsMessage = StrutsMessage.errorMessage(e.getMessage());
+			}
+		
+		return SUCCESS;
+	}
+
+	
 	/**
 	 * 审核表
 	 * @return
@@ -90,7 +98,7 @@ public class ShiyongAction  extends StandardActionSupport {
 			if(yy != null){
 				yy.setYuyue_yn(syyn);
 				if(syyn.equals("no")){
-					yy.setYuyueshenhe_yy(syyn);
+					yy.setYuyueshenhe_yy(syshyy);
 				}
 				
 				this.dbOperation.updateSingleData(yy);
@@ -155,6 +163,14 @@ public class ShiyongAction  extends StandardActionSupport {
 		return sywpsl;
 	}
 
+	public String getSyjldw() {
+		return syjldw;
+	}
+
+	public void setSyjldw(String syjldw) {
+		this.syjldw = syjldw;
+	}
+
 	public void setSywpsl(String sywpsl) {
 		this.sywpsl = sywpsl;
 	}
@@ -181,6 +197,14 @@ public class ShiyongAction  extends StandardActionSupport {
 
 	public void setSyyy(String syyy) {
 		this.syyy = syyy;
+	}
+
+	public String getSyshyy() {
+		return syshyy;
+	}
+
+	public void setSyshyy(String syshyy) {
+		this.syshyy = syshyy;
 	}
 
 	public StrutsMessage getStrutsMessage() {

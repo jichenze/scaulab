@@ -23,9 +23,10 @@ define([ "jquery" ], function() {
 				                    			sypid:$("#sypid").val(),		
 				                    			synumber:$("#synumber").val(),
 				                    			sywpname:$("#sywpname").val(),
-				                    			sylx:$("#sylx").val(),
+				        
 				                    			sywpsl:$("#sywpsl").val(),
 				                    			syjldw:$("#syjldw").val(),
+				                    			sydd:$("#sydd").val(),
 				                    			syyy:$("#syyy").val()
 				                    		},
 				                    		shelter: '正在提交预约单，请稍侯…',

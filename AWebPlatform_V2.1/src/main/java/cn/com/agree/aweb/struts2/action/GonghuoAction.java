@@ -21,12 +21,13 @@ public class GonghuoAction extends StandardActionSupport {
 	private static final Logger log = LoggerFactory.getLogger(GonghuoAction.class);
 	
 	private String ghid;
-	private String ghrname;
+	private String ghrname;//供货人姓名
 	private String ghtime;
-	private String ghpn;
-	private String ghsrname;//接收人
-	private String ghwpname;
-	private String ghsl;
+	private String ghpn;//联系方式
+	private String ghsrname;//收货人姓名
+	private String ghwpname;//物品名称
+	private String ghsl;//供货数量
+	private String ghjldw;//计量单位
 	private String ghlx;//物品类型
 	private String ghccdw;//物品存储单位
 	private String ghccdd;//物品存储地点
@@ -63,6 +64,7 @@ public class GonghuoAction extends StandardActionSupport {
 			gh.setGonghuo_phone(ghpn);
 			gh.setGonghuo_sname(ghsrname);
 			gh.setGonghuo_sl(ghsl);
+			gh.setGonghuo_jldw(ghjldw);
 			gh.setGonghuo_wpname(ghwpname);
 			gh.setGonghuo_wplx(ghlx);
 			gh.setGonghuo_ccdd(ghccdd);
@@ -90,9 +92,10 @@ public class GonghuoAction extends StandardActionSupport {
 	 * 更新存储信息
 	 * 
 	 */
-	@SuppressWarnings("null")
 	public void updateCunchu(){
 		try {
+			System.out.println("物品名称： "+ghwpname);
+			
 			CunchuVO cc = (CunchuVO) this.dbOperation.queryDataById(CunchuVO.class, ghwpname);
 			if(cc!=null){		//物品存在，则增加其数量，修改其更新时间
 				int a= Integer.parseInt(cc.getCunchu_liang());
@@ -102,10 +105,13 @@ public class GonghuoAction extends StandardActionSupport {
 				cc.setCunchu_liang(s);
 				cc.setCunchu_updatetime(CommonUtils.getNowTime());
 				
-			}else{		//物品不存在，则新增物品信息
-				cc.setCunchu_name(ghwpname);
+			}else{		//物品不存在，则应新建物品对象，不然此时对象为空，之后才可以新增物品信息
+				cc = new CunchuVO();
+				
+				cc.setCunchu_name(ghwpname);			
 				cc.setCunchu_lx(ghlx);
 				cc.setCunchu_liang(ghsl);
+				cc.setCunchu_jldw(ghjldw);
 				cc.setCunchu_dw(ghccdw);
 				cc.setCunchu_dd(ghccdd);
 				cc.setCunchu_updatetime(CommonUtils.getNowTime());				
@@ -170,6 +176,14 @@ public class GonghuoAction extends StandardActionSupport {
 
 	public void setGhsl(String ghsl) {
 		this.ghsl = ghsl;
+	}
+
+	public String getGhjldw() {
+		return ghjldw;
+	}
+
+	public void setGhjldw(String ghjldw) {
+		this.ghjldw = ghjldw;
 	}
 
 	public String getGhwpname() {

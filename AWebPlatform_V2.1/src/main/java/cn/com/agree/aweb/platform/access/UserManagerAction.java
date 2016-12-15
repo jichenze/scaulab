@@ -259,24 +259,24 @@ public class UserManagerAction extends StandardActionSupport{
 	 * @return
 	 * @throws DBSupportException 
 	 */
-//	public String validateUsername(){
-//			if(username != null && username.length()>0) {
-//				try {
-//					AWebUserVO vo = (AWebUserVO) this.dbOperation.queryDataById(AWebUserVO.class, username);
-//					if(vo!=null){
-//						strutsMessage = StrutsMessage.errorMessage("用户名重复，请重新输入！");
-//					}else{
-//						strutsMessage = StrutsMessage.successMessage();
-//					}
-//				} catch (DBSupportException e) {
-//					log.error("用户名验证", e);
-//					strutsMessage = StrutsMessage.errorMessage(e.getMessage());
-//				}
-//			} else {
-//				strutsMessage = StrutsMessage.errorMessage("请输入用户名！");
-//			}
-//			return SUCCESS;
-//	}
+	public String validateUsername(){
+			if(username != null && username.length()>0) {
+				try {
+					AWebUserVO vo = (AWebUserVO) this.dbOperation.queryDataById(AWebUserVO.class, username);
+					if(vo!=null){
+						strutsMessage = StrutsMessage.errorMessage("用户名重复，请重新输入！");
+					}else{
+						strutsMessage = StrutsMessage.successMessage();
+					}
+				} catch (DBSupportException e) {
+					log.error("用户名验证", e);
+					strutsMessage = StrutsMessage.errorMessage(e.getMessage());
+				}
+			} else {
+				strutsMessage = StrutsMessage.errorMessage("请输入用户名！");
+			}
+			return SUCCESS;
+	}
 	
 	
 	
