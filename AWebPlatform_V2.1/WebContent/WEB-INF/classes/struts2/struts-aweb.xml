@@ -126,7 +126,14 @@
         </action>
         
         <!-- 回收 -->
+         <!-- 一般回收 -->
          <action name="HuishouAction_*" class="HuishouActionBean" method="{1}">
+            <result name="success" type="json">
+                <param name="root">strutsMessage</param>
+            </result>
+        </action>
+        <!-- 废液回收 -->
+        <action name="HuishouFeiyeAction_*" class="HuishouFeiyeActionBean" method="{1}">
             <result name="success" type="json">
                 <param name="root">strutsMessage</param>
             </result>

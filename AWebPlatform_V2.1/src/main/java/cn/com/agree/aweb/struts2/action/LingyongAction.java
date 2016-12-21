@@ -96,7 +96,8 @@ public class LingyongAction extends StandardActionSupport {
 	
 	/**
 	 * 更新存储信息
-	 * 暂时不确定是否要有数量不足的弹框提示，此处和 供货不同
+	 * 确定要有数量不足的弹框提示，此处和 供货不同
+	 * 在更新成功的同时，返回物品对象 和 剩余量， 由前台js判断：如果数量少于临界值（暂定为 30 ，忽略计量单位），就弹框提示
 	 * @return
 	 */
 	public boolean updateCunchu(){
@@ -105,19 +106,20 @@ public class LingyongAction extends StandardActionSupport {
 			if(cc!=null){		//物品存在，则减少其数量，修改其更新时间
 				int a= Integer.parseInt(cc.getCunchu_liang());
 				int b= Integer.parseInt(lysl);
-				if(a>=b){
-					int count= a-b;
-					String s= ""+count;//此处可能有bug
+				int count= a-b;
+				if(a>=b){					
+					String s= ""+count;
 					cc.setCunchu_liang(s);
 					cc.setCunchu_updatetime(CommonUtils.getNowTime());
 					
 					this.dbOperation.saveOrUpdateSingleData(cc);
 					strutsMessage = StrutsMessage.successMessage();
 					strutsMessage.addParameter("cc",cc);
-					
+					strutsMessage.addParameter("count",count);
 					return true;
 				}else{
 					strutsMessage = StrutsMessage.errorMessage("物品数量不足！");
+					strutsMessage.addParameter("count",count);
 					return false;
 				}				
 			}else{

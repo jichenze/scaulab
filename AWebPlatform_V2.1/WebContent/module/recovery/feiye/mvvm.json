@@ -1,0 +1,13 @@
+{
+    "views": {
+        "barV1": {
+            "template": "feiye.jsp",
+            "js": "feiye.js"
+        }
+    },
+    "models": {},
+    "flows": [{
+        "id": "barV1"
+    }]
+    
+}

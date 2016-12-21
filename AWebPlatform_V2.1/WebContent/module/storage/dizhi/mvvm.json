@@ -1,0 +1,13 @@
+{
+    "views": {
+        "barV2": {
+            "template": "dizhi.jsp",
+            "js": "dizhi.js"
+        }
+    },
+    "models": {},
+    "flows": [{
+        "id": "barV2"
+    }
+    ]
+}

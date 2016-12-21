@@ -87,4 +87,8 @@
 		scope="prototype">
 		<property name="dbOperation" ref="hibernateDao"></property>
 	</bean>
+	<bean id="HuishouFeiyeActionBean" class="cn.com.agree.aweb.struts2.action.HuishouFeiyeAction"
+		scope="prototype">
+		<property name="dbOperation" ref="hibernateDao"></property>
+	</bean>
 </beans>

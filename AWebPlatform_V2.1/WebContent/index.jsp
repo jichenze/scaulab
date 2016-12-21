@@ -99,6 +99,7 @@
 							<!--子菜单项 Start-->
 							<li><a data-href="storage#general">一般实验室物品</a></li>
 							<li><a data-href="storage#danger">易制毒、剧毒物品</a></li>
+							<li><a data-href="storage#dizhi">低值品</a></li>
 							<!--子菜单项 End-->
 						</ul>
 					</div>
@@ -139,6 +140,7 @@
 						<ul class="nav nav-list">
 							<!--子菜单项 Start-->
 							<li><a data-href="recovery#huishou">回收表</a></li>
+							<li><a data-href="recovery#feiye">废液表</a></li>
 							<!--子菜单项 End-->
 						</ul>
 					</div>
@@ -146,25 +148,25 @@
 			</div>
 
 
-			<div class="accordion-group">
-				<div class="accordion-heading">
-					<a class="accordion-toggle collapsed hvr-bounce-to-left"
-						data-toggle="collapse" data-parent="#asideMenuList"
-						href="#asideDev"> <i class="fa fa-yelp"></i> <span>开发者</span>
-						<i class="fa fa-angle-down"></i>
-					</a>
-				</div>
-				<div id="asideDev" class="accordion-body collapse">
-					<div class="accordion-inner">
-						<ul class="nav nav-list">
-							<li><a data-href="awebDevDocs#awebDevDescription">开发说明</a></li>
-							<li><a data-href="awebDevDocs#awebJSAPIs">前端JS API</a></li>
-							<li><a data-href="awebDevDocs#awebCssSpecification">前端CSS
-									API</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
+<!-- 			<div class="accordion-group"> -->
+<!-- 				<div class="accordion-heading"> -->
+<!-- 					<a class="accordion-toggle collapsed hvr-bounce-to-left" -->
+<!-- 						data-toggle="collapse" data-parent="#asideMenuList" -->
+<!-- 						href="#asideDev"> <i class="fa fa-yelp"></i> <span>开发者</span> -->
+<!-- 						<i class="fa fa-angle-down"></i> -->
+<!-- 					</a> -->
+<!-- 				</div> -->
+<!-- 				<div id="asideDev" class="accordion-body collapse"> -->
+<!-- 					<div class="accordion-inner"> -->
+<!-- 						<ul class="nav nav-list"> -->
+<!-- 							<li><a data-href="awebDevDocs#awebDevDescription">开发说明</a></li> -->
+<!-- 							<li><a data-href="awebDevDocs#awebJSAPIs">前端JS API</a></li> -->
+<!-- 							<li><a data-href="awebDevDocs#awebCssSpecification">前端CSS -->
+<!-- 									API</a></li> -->
+<!-- 						</ul> -->
+<!-- 					</div> -->
+<!-- 				</div> -->
+<!-- 			</div> -->
 		</div>
 	</div>
 	<%--左侧边栏 End--%>
